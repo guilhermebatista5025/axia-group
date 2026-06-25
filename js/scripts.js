@@ -131,3 +131,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// 7. Certificações Lightbox Modal
+window.openCertModal = function(imgSrc, title) {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("certModalImg");
+    const caption = document.getElementById("certModalCaption");
+    
+    if (modal && modalImg && caption) {
+        modal.style.display = "flex";
+        modalImg.src = imgSrc;
+        caption.textContent = title;
+        document.body.style.overflow = "hidden"; // Disable background scrolling
+    }
+};
+
+window.closeCertModal = function() {
+    const modal = document.getElementById("certModal");
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = ""; // Enable scrolling again
+    }
+};
+
+// Close modal when clicking outside the certificate image
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("certModal");
+    if (modal) {
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                window.closeCertModal();
+            }
+        });
+    }
+});
