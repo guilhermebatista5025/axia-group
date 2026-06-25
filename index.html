@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- HEADER -->
@@ -46,38 +46,58 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero" id="inicio">
-            <div class="hero-image-wrapper">
-                <div class="hero-green-shape"></div>
-                <img src="assets/images/hero.png" alt="Apresentação executiva" class="hero-bg-img" />
-            </div>
+       <section class="hero" id="inicio">
+    <div class="hero-graphics">
+        <!-- 1. Faixa Cinza Translúcida (Fundo) -->
+        <div class="shape-gray-bg"></div>
+        
+        <!-- 2. Faixa Verde Principal -->
+        <div class="shape-green-line"></div>
+        
+        <!-- 3. Container com o Recorte da Imagem -->
+        <div class="hero-img-container">
+            <img src="assets/elementos-hero/imagem-principal.png" alt="Apresentação executiva" class="hero-bg-img" />
+        </div>
+        
+        <!-- 4. Detalhe Azul Escuro no Canto Inferior Direito -->
+        <div class="shape-right-dark"></div>
+        
+        <!-- 5. Detalhe Claro/Branco no Canto Superior Direito -->
+        <div class="shape-right-light"></div>
+    </div>
+    
+    <div class="container hero-container">
+        <div class="hero-content fade-up">
+            <h1 class="hero-title">Educação corporativa, liderança<br>e gestão para empresas<br>em <span class="text-accent">crescimento.</span></h1>
+            <p class="hero-description">Cursos online e experiências presenciais que desenvolvem<br>pessoas, fortalecem líderes e impulsionam resultados.</p>
             
-            <div class="container hero-container">
-                <div class="hero-content fade-up">
-                    <h1 class="hero-title">Educação corporativa, liderança e gestão para empresas em <span class="text-accent">crescimento.</span></h1>
-                    <p class="hero-description">Cursos online e experiências presenciais que desenvolvem pessoas, fortalecem líderes e impulsionam resultados.</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#cursos" class="btn btn-primary btn-lg">Explorar Cursos <i class="ph ph-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="hero-benefits">
-                        <div class="benefit-item">
-                            <i class="ph ph-desktop"></i>
-                            <span>Cursos 100% Online<br>e Presenciais</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="ph ph-chalkboard-teacher"></i>
-                            <span>Instrutores<br>Especialistas</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="ph ph-certificate"></i>
-                            <span>Certificado<br>Reconhecido</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-buttons">
+                <a href="#cursos" class="btn btn-primary">
+                    Explorar Cursos <i class="ph ph-arrow-right"></i>
+                </a>
             </div>
-        </section>
+        </div>
+        
+        <div class="hero-benefits fade-up">
+            <div class="benefit-item">
+                <i class="ph ph-graduation-cap"></i>
+                <span>Cursos 100% Online<br>e Presenciais</span>
+            </div>
+            <div class="benefit-item">
+                <i class="ph ph-user-circle"></i>
+                <span>Instrutores<br>Especialistas</span>
+            </div>
+            <div class="benefit-item">
+                <i class="ph ph-notebook"></i>
+                <span>Conteúdo Aplicável<br>à sua Realidade</span>
+            </div>
+            <div class="benefit-item">
+                <i class="ph ph-certificate"></i>
+                <span>Certificado<br>Reconhecido</span>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- NOSSAS TRILHAS SECTION -->
         <section class="trilhas" id="cursos">
@@ -131,44 +151,87 @@
             </div>
         </section>
 
-        <!-- DESTAQUES 2 CARDS -->
-        <section class="destaques" id="incompany">
+        <!-- PARA EMPRESAS -->
+        <section class="secao-incompany" id="incompany">
             <div class="container">
-                <div class="destaques-grid">
+                <!-- Header da Seção -->
+                <div class="incompany-header fade-up">
+                    <span class="destaque-label text-accent">Para Empresas</span>
+                    <h2 class="incompany-title">Treinamentos In Company que geram resultados reais</h2>
+                    <p class="incompany-description">Soluções personalizadas para desenvolver lideranças, equipes e fortalecer a cultura da sua empresa.</p>
+                </div>
+                
+                <!-- Grid de Conteúdo -->
+                <div class="incompany-grid-container">
+                    <!-- Esquerda: Imagem -->
+                    <div class="incompany-media fade-up">
+                        <img src="assets/images/hero.png" alt="Treinamentos In Company" class="incompany-portrait-img" />
+                    </div>
                     
-                    <!-- Left Card -->
-                    <div class="destaque-card destaque-online fade-up">
-                        <div class="destaque-img-wrapper">
-                            <img src="assets/images/devices.png" alt="Plataforma de cursos online" />
-                        </div>
-                        <div class="destaque-content">
-                            <span class="destaque-label text-accent">Aprenda do seu jeito</span>
-                            <h3>Cursos Online +<br>Experiências Presenciais</h3>
-                            <p>Plataforma moderna, conteúdo atualizado e experiências imersivas para aplicar o aprendizado na prática.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Conheça a Plataforma <i class="ph ph-arrow-right"></i></a>
+                    <!-- Centro: Lista Detalhada -->
+                    <div class="incompany-body fade-up delay-100">
+                        <ul class="incompany-features-list">
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <div>
+                                    <h4>Diagnóstico de necessidades</h4>
+                                    <p>Identificamos as lacunas de competências para desenhar a solução ideal para seu time.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <div>
+                                    <h4>Conteúdo sob medida</h4>
+                                    <p>Treinamentos customizados com cases e desafios reais do seu mercado de atuação.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <div>
+                                    <h4>Instrutores especialistas</h4>
+                                    <p>Profissionais experientes no mercado corporativo trazendo vivência prática.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <div>
+                                    <h4>Resultados mensuráveis</h4>
+                                    <p>Métricas claras de aproveitamento e planos de ação para pós-treinamento.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <div>
+                                    <h4>Acompanhamento pós-treinamento</h4>
+                                    <p>Suporte contínuo para garantir a aplicação prática do aprendizado no dia a dia.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="incompany-cta">
+                            <a href="#contato" class="btn btn-primary">Fale com um Consultor <i class="ph ph-arrow-right"></i></a>
                         </div>
                     </div>
                     
-                    <!-- Right Card -->
-                    <div class="destaque-card destaque-incompany fade-up delay-200">
-                        <div class="destaque-incompany-left">
-                            <div class="destaque-icon"><i class="ph-duotone ph-buildings"></i></div>
-                            <span class="destaque-label text-accent">Para Empresas</span>
-                            <h3>Treinamentos In Company que geram resultados reais</h3>
-                            <p>Soluções personalizadas para desenvolver lideranças, equipes e fortalecer a cultura da sua empresa.</p>
-                            <a href="#contato" class="btn btn-outline-primary btn-sm">Fale com um Consultor <i class="ph ph-arrow-right"></i></a>
-                        </div>
-                        <div class="destaque-incompany-right">
-                            <ul class="incompany-list">
-                                <li><i class="ph ph-check"></i> Diagnóstico de necessidades</li>
-                                <li><i class="ph ph-check"></i> Conteúdo sob medida</li>
-                                <li><i class="ph ph-check"></i> Instrutores especialistas</li>
-                                <li><i class="ph ph-check"></i> Resultados mensuráveis</li>
-                                <li><i class="ph ph-check"></i> Acompanhamento pós-treinamento</li>
-                            </ul>
-                        </div>
+                    <!-- Direita: Texto Vertical Decorativo -->
+                    <div class="incompany-vertical-text">
+                        <span>QUALIDADE &amp; PERFORMANCE</span>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- APRENDA DO SEU JEITO -->
+        <section class="secao-plataforma" id="plataforma">
+            <div class="container secao-container">
+                <div class="plataforma-img-wrapper fade-up">
+                    <img src="assets/images/devices.png" alt="Plataforma de cursos online" />
+                </div>
+                <div class="plataforma-content fade-up delay-200">
+                    <span class="destaque-label text-accent">Aprenda do seu jeito</span>
+                    <h2 class="plataforma-title">Cursos Online +<br>Experiências Presenciais</h2>
+                    <p class="plataforma-description">Plataforma moderna, conteúdo atualizado e experiências imersivas para aplicar o aprendizado na prática.</p>
+                    <a href="#" class="btn btn-outline-primary">Conheça a Plataforma <i class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -267,12 +330,9 @@
     <footer class="footer" id="contato">
         <div class="container footer-container">
             <div class="footer-col brand-col">
-                <a href="#" class="logo footer-logo">
-                    <div class="logo-mark"><i>AG</i></div>
-                    <div class="logo-text">
-                        <span class="logo-axia">AXIA GROUP</span><span class="logo-separator">|</span><span class="logo-academy">ACADEMY</span>
-                    </div>
-                </a>
+            <div class="header-logo-container">
+                <img src="assets/images/logo/logo.png" alt="Logo AXIA GROUP">
+            </div>
                 <p class="footer-desc">Educação corporativa, liderança e gestão para empresas em crescimento.</p>
             </div>
             
@@ -314,6 +374,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

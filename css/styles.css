@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header.scrolled {
-    height: 70px;
+    height: 90px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-logo-container {
     margin-top: 10px;
     margin-left: -250px;
-    height: 150px;
+    height: 190px;
     display: flex;
     align-items: center;
 }
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     font-weight: 500;
     position: relative;
     padding-bottom: 6px;
@@ -235,6 +235,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
+.header-actions .btn {
+    padding: 0.55rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
 .header .btn-icon {
     color: #FFFFFF;
 }
@@ -261,158 +268,321 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    HERO SECTION
    ========================================================================== */
+
 .hero {
     position: relative;
-    padding: 160px 0 80px;
+    padding: 140px 0 100px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
-    min-height: 80vh;
-}
-
-.hero-image-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.hero-image-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 100%;
-    background-color: #008F7A;
-    z-index: 1;
-    transform: skewX(-20deg) translateX(-50px);
-}
-
-.hero-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 0;
+    min-height: 85vh;
+    overflow: hidden; /* Garante que nenhum elemento geométrico vaze a tela */
 }
 
 .hero-container {
+    max-width: 1400px;
+    margin-left: 40px;
+    margin-top: 60px;
+    padding: 0 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-content {
-    max-width: 60%;
-    padding-right: 2rem;
+    max-width: 55%; /* Aumentado para dar espaço ao texto e quebras de linha sem sobrepor a imagem */
 }
 
 .hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
     letter-spacing: -1px;
+}
+
+.text-accent {
+    color: #008F7A;
 }
 
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 90%;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 95%;
 }
 
+/* --- ESTRUTURA DOS ELEMENTOS GRÁFICOS (DIREITA) --- */
+.hero-graphics {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58%; /* Ocupa a proporção exata do layout original */
+    height: 100%;
+    z-index: 1;
+}
+
+/* 1. Faixa Cinza Translúcida (Fundo) */
+.shape-gray-bg {
+    position: absolute;
+    top: 0;
+    left: 115px;
+    width: 25%;
+    height: 100%;
+    background-color: #F1F5F9;
+    transform: skewX(-20deg);
+    z-index: 1;
+}
+
+/* 2. Faixa Verde Principal */
+.shape-green-line {
+    position: absolute;
+    top: 0;
+    left: 16%;
+    width: 45px;
+    height: 100%;
+    background-color: #008F7A;
+    transform: skewX(-20deg);
+    z-index: 3;
+}
+
+/* 3. Container com o Recorte da Imagem */
+.hero-img-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 84%;
+    height: 100%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+}
+
+/* 4. A foto propriamente dita */
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* O SEGREDO: Move a foto levemente para a direita e para baixo dentro do recorte, 
+       impedindo que a cabeça do profissional ou as costas do aluno sejam cortadas */
+    object-position: 18% center; 
+    transform: scale(1.1) translateY(55px);
+}
+
+/* 5. Detalhe Azul Escuro no Canto Inferior Direito */
+.shape-right-dark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    background-color: #0F172A; /* Cor escura idêntica ao seu menu */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: 4;
+}
+
+/* 6. Detalhe Claro/Branco no Canto Superior Direito */
+.shape-right-light {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.15);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    backdrop-filter: blur(5px); /* Dá o efeito sutil de vidro do design original */
+    z-index: 4;
+}
+
+/* --- BOTÕES --- */
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.btn-whatsapp {
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
+.btn-primary {
+    background-color: #008F7A;
+    color: #FFFFFF;
+    border: 2px solid #008F7A;
+}
+
+.btn-primary:hover {
+    background-color: #006b5c;
+    border-color: #006b5c;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #008F7A;
+    border: 2px solid #008F7A;
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 143, 122, 0.05);
+}
+
+/* --- BENEFÍCIOS --- */
 .hero-benefits {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
+    margin-top: 1.0rem;
 }
 
 .benefit-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.0rem;
-    color: #58616B;
-    line-height: 1.2;
+    gap: 0.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+    transition: all 0.2s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-color: #008F7A;
 }
 
 .benefit-item i {
     color: #008F7A;
-    font-size: 2.5rem;
+    font-size: 1.4rem;
+}
+
+.benefit-item span {
+    font-size: 0.75rem;
+    color: #475569;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+    .hero-graphics {
+        display: none;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-benefits {
+        justify-content: center;
+    }
 }
 
 /* ==========================================================================
    NOSSAS TRILHAS SECTION
    ========================================================================== */
 .trilhas {
-    padding: 4rem 0;
-    background-color: #FFFFFF;
+    padding: 5rem 0;
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.trilhas .container {
+    max-width: 100%;
+    padding: 0 4rem;
 }
 
 .section-header-flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #E8ECEF;
-    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 0.75rem;
 }
 
 .trilhas-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
 }
 
 .trilha-card {
     background: #FFFFFF;
-    border: 1px solid #E8ECEF;
+    border: 1px solid #E2E8F0;
     border-radius: 12px;
-    padding: 1.5rem;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem 1.75rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
 }
 
 .trilha-card:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 143, 122, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 143, 122, 0.08), 0 10px 10px -5px rgba(0, 143, 122, 0.04);
+    border-color: #008F7A;
 }
 
 .trilha-icon {
-    font-size: 2.5rem;
-    color: #0A1D3A;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #008F7A;
+    background: rgba(0, 143, 122, 0.06);
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.trilha-card:hover .trilha-icon {
+    background: #008F7A;
+    color: #FFFFFF;
 }
 
 .trilha-title {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0A1D3A;
+    margin-bottom: 0.75rem;
 }
 
 .trilha-desc {
-    font-size: 0.8rem;
-    color: #58616B;
+    font-size: 0.85rem;
+    color: #64748B;
+    line-height: 1.6;
     flex-grow: 1;
     margin-bottom: 1.5rem;
 }
 
 .trilha-arrow {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     border: 1px solid #008F7A;
     display: flex;
@@ -420,124 +590,176 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     color: #008F7A;
     align-self: flex-end;
-    font-size: 0.8rem;
-    transition: 0.2s ease;
+    font-size: 0.85rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .trilha-card:hover .trilha-arrow {
     background: #008F7A;
     color: #FFFFFF;
+    transform: translateX(3px);
 }
 
 /* ==========================================================================
-   DESTAQUES 2 CARDS SECTION
+   SEÇÕES: PARA EMPRESAS & APRENDA DO SEU JEITO
    ========================================================================== */
-.destaques {
-    padding: 0 0 4rem;
+.secao-incompany {
+    padding: 7rem 0;
     background-color: #FFFFFF;
 }
 
-.destaques-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+.secao-plataforma {
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
 }
 
-.destaque-card {
-    border-radius: 12px;
+.secao-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Para Empresas Style (Inspirado no layout HKTCDOBRASIL) */
+.incompany-header {
+    max-width: 850px;
+    margin-bottom: 4rem;
+}
+
+.incompany-header .incompany-title {
+    font-size: 2.5rem;
+    color: #0A1D3A;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.incompany-header .incompany-description {
+    font-size: 1.1rem;
+    color: #58616B;
+    line-height: 1.6;
+}
+
+.incompany-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr auto;
+    gap: 4rem;
+    align-items: center;
+}
+
+.incompany-media {
+    width: 100%;
+    height: 520px;
+    border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.incompany-media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 29, 58, 0.05), rgba(10, 29, 58, 0.3));
+    pointer-events: none;
+}
+
+.incompany-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.incompany-icon {
+    font-size: 2.5rem;
+    color: #008F7A;
+    margin-bottom: 1rem;
 }
 
 .destaque-label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Left Card */
-.destaque-online {
-    background-color: #F3F5F7;
-    align-items: center;
+/* Detailed features style */
+.incompany-body .incompany-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.destaque-img-wrapper {
-    flex: 0 0 45%;
-    padding: 2rem;
+.incompany-body .incompany-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.incompany-body .incompany-features-list i {
+    color: #008F7A;
+    font-size: 1.75rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.incompany-body .incompany-features-list h4 {
+    font-size: 1.15rem;
+    color: #0A1D3A;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.incompany-body .incompany-features-list p {
+    font-size: 0.9rem;
+    color: #58616B;
+    line-height: 1.5;
+}
+
+.incompany-cta {
+    margin-top: 2.5rem;
+}
+
+/* Vertical Decorative Text on the Right */
+.incompany-vertical-text {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-left: 1px solid #E2E8F0;
+    padding-left: 2rem;
+    height: 380px;
 }
 
-.destaque-content {
-    flex: 1;
-    padding: 2.5rem 2rem 2.5rem 0;
-}
-
-.destaque-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.destaque-content p {
+.incompany-vertical-text span {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
     font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #94A3B8;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
 }
 
-/* Right Card */
-.destaque-incompany {
-    background-color: #FFFFFF;
-    border: 1px solid #E8ECEF;
-}
-
-.destaque-incompany-left {
-    flex: 1;
-    padding: 2.5rem;
-    border-right: 1px solid #E8ECEF;
-}
-
-.destaque-icon {
-    font-size: 2.5rem;
-    color: #0A1D3A;
-    margin-bottom: 1rem;
-}
-
-.destaque-incompany-left h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.destaque-incompany-left p {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-}
-
-.destaque-incompany-right {
-    flex: 0 0 40%;
-    padding: 2.5rem 1.5rem;
-    background-color: #FAFCFE;
-}
-
-.incompany-list {
+/* Plataforma Style */
+.plataforma-img-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.incompany-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    color: #0A1D3A;
-}
-
-.incompany-list i {
-    color: #58616B;
-    font-size: 1rem;
-    margin-top: 2px;
+.plataforma-img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
 }
 
 /* ==========================================================================
@@ -834,8 +1056,19 @@ h1, h2, h3, h4, h5, h6 {
     .trilhas-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    .destaques-grid {
+    .secao-container {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    .incompany-grid-container {
         grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .incompany-vertical-text {
+        display: none;
+    }
+    .incompany-media {
+        height: 380px;
     }
     .resultados-grid {
         grid-template-columns: 1fr 1fr;
@@ -849,6 +1082,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .trilhas .container {
+        padding: 0 1.5rem;
+    }
     .header-actions .btn {
         display: none;
     }
@@ -878,15 +1114,18 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
     
-    .destaque-online {
-        flex-direction: column;
+    .plataforma-img-wrapper {
+        order: 2;
     }
-    .destaque-incompany {
-        flex-direction: column;
+    .secao-incompany,
+    .secao-plataforma {
+        padding: 4rem 0;
     }
-    .destaque-incompany-left {
-        border-right: none;
-        border-bottom: 1px solid #E8ECEF;
+    .incompany-header .incompany-title {
+        font-size: 2rem;
+    }
+    .incompany-media {
+        height: 300px;
     }
 }
 
