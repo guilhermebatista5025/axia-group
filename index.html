@@ -1,405 +1,676 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AXIA GROUP | ACADEMY. Educação corporativa, liderança e gestão para empresas em crescimento.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AXIA GROUP | ACADEMY. Educação corporativa, liderança e gestão para empresas em crescimento."
+    />
     <title>AXIA GROUP | ACADEMY - Consultoria Empresarial</title>
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css?v=1.11">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css?v=1.28" />
+  </head>
+  <body>
     <!-- HEADER -->
     <header class="header" id="header">
-        <div class="container header-container">
-            <div class="header-logo-container">
-                <img src="assets/images/logo/logo.png" alt="Logo AXIA GROUP">
-            </div>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link active">Início</a></li>
-                    <li><a href="#cursos" class="nav-link">Cursos</a></li>
-                    <li><a href="#incompany" class="nav-link">Treinamentos In Company</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <a href="#" class="btn btn-outline-primary">Entrar</a>
-                <a href="#contato" class="btn btn-primary">Falar com a Equipe</a>
-                <button class="btn-icon mobile-toggle" aria-label="Menu" id="mobile-toggle"><i class="ph ph-list"></i></button>
-            </div>
+      <div class="container header-container">
+        <div class="header-logo-container">
+          <img src="assets/images/logo/logo.png" alt="Logo AXIA GROUP" />
         </div>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link active">Início</a></li>
+            <li><a href="#cursos" class="nav-link">Cursos</a></li>
+            <li>
+              <a href="#incompany" class="nav-link">Treinamentos In Company</a>
+            </li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#" class="btn btn-outline-primary">Entrar</a>
+          <a href="#contato" class="btn btn-primary">Falar com a Equipe</a>
+          <button
+            class="btn-icon mobile-toggle"
+            aria-label="Menu"
+            id="mobile-toggle"
+          >
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-       <section class="hero" id="inicio">
-    <div class="hero-graphics">
-        <!-- 1. Faixa Cinza Translúcida (Fundo) -->
-        <div class="shape-gray-bg"></div>
-        
-        <!-- 2. Faixa Verde Principal -->
-        <div class="shape-green-line"></div>
-        
-        <!-- 3. Container com o Recorte da Imagem -->
-        <div class="hero-img-container">
-            <img src="assets/elementos-hero/imagem-principal.png" alt="Apresentação executiva" class="hero-bg-img" />
-        </div>
-        
-        <!-- 4. Detalhe Azul Escuro no Canto Inferior Direito -->
-        <div class="shape-right-dark"></div>
-        
-        <!-- 5. Detalhe Claro/Branco no Canto Superior Direito -->
-        <div class="shape-right-light"></div>
-    </div>
-    
-    <div class="container hero-container">
-        <div class="hero-content fade-up">
-            <h1 class="hero-title">Educação corporativa, liderança<br>e gestão para empresas<br>em <span class="text-accent">crescimento.</span></h1>
-            <p class="hero-description">Cursos online e experiências presenciais que desenvolvem<br>pessoas, fortalecem líderes e impulsionam resultados.</p>
-            
-            <div class="hero-buttons">
+      <!-- HERO SECTION -->
+      <section class="hero" id="inicio">
+        <!-- Desktop Hero Layout (Only shown on Desktop) -->
+        <div class="hero-desktop-wrapper">
+          <div class="hero-graphics">
+            <!-- 1. Faixa Cinza Translúcida (Fundo) -->
+            <div class="shape-gray-bg"></div>
+
+            <!-- 2. Faixa Verde Principal -->
+            <div class="shape-green-line"></div>
+
+            <!-- 3. Container com o Recorte da Imagem -->
+            <div class="hero-img-container">
+              <img
+                src="assets/elementos-hero/imagem-principal.png"
+                alt="Apresentação executiva"
+                class="hero-bg-img"
+              />
+            </div>
+
+            <!-- 4. Detalhe Azul Escuro no Canto Inferior Direito -->
+            <div class="shape-right-dark"></div>
+
+            <!-- 5. Detalhe Claro/Branco no Canto Superior Direito -->
+            <div class="shape-right-light"></div>
+          </div>
+
+          <div class="container hero-container">
+            <div class="hero-content fade-up">
+              <h1 class="hero-title">
+                Educação corporativa, liderança<br />e gestão para empresas<br />em
+                <span class="text-accent">crescimento.</span>
+              </h1>
+              <p class="hero-description">
+                Cursos online e experiências presenciais que desenvolvem<br />pessoas,
+                fortalecem líderes e impulsionam resultados.
+              </p>
+
+              <div class="hero-buttons">
                 <a href="#cursos" class="btn btn-primary">
-                    Explorar Cursos <i class="ph ph-arrow-right"></i>
+                  Explorar Cursos <i class="ph ph-arrow-right"></i>
                 </a>
+              </div>
             </div>
-        </div>
-        
-        <div class="hero-benefits fade-up">
-            <div class="benefit-item">
+
+            <div class="hero-benefits fade-up">
+              <div class="benefit-item">
                 <i class="ph ph-graduation-cap"></i>
-                <span>Cursos 100% Online<br>e Presenciais</span>
-            </div>
-            <div class="benefit-item">
+                <span>Cursos 100% Online<br />e Presenciais</span>
+              </div>
+              <div class="benefit-item">
                 <i class="ph ph-user-circle"></i>
-                <span>Instrutores<br>Especialistas</span>
-            </div>
-            <div class="benefit-item">
+                <span>Instrutores<br />Especialistas</span>
+              </div>
+              <div class="benefit-item">
                 <i class="ph ph-notebook"></i>
-                <span>Conteúdo Aplicável<br>à sua Realidade</span>
-            </div>
-            <div class="benefit-item">
+                <span>Conteúdo Aplicável<br />à sua Reality</span>
+              </div>
+              <div class="benefit-item">
                 <i class="ph ph-certificate"></i>
-                <span>Certificado<br>Reconhecido</span>
+                <span>Certificado<br />Reconhecido</span>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
 
-        <!-- NOSSAS TRILHAS SECTION -->
-        <section class="trilhas" id="cursos">
-            <div class="container">
-                <div class="section-header-flex fade-up">
-                    <h2 class="section-title">Nossas Trilhas</h2>
-                    <a href="#" class="link-accent">Ver todos os cursos <i class="ph ph-arrow-right"></i></a>
+        <!-- Mobile Hero Layout (Only shown on Mobile/Tablet) -->
+        <div class="hero-mobile-wrapper">
+          <div class="container">
+            <div class="hero-mobile-content fade-up">
+              <h1 class="hero-mobile-title">
+                Conhecimento<br>que <span class="text-accent">transforma.</span><br>Resultados que<br><span class="text-accent">impulsionam.</span>
+              </h1>
+              <p class="hero-mobile-description">
+                Formação prática, atualizada e estratégica para você evoluir, liderar e gerar impacto no mercado.
+              </p>
+              
+              <!-- CTA Button -->
+              <div class="hero-mobile-buttons">
+                <a href="#cursos" class="btn-hero-mobile">
+                  Conheça nossos cursos <i class="ph ph-arrow-right"></i>
+                </a>
+              </div>
+              
+              <!-- Benefits Grid -->
+              <div class="hero-mobile-benefits">
+                <div class="mobile-benefit-item">
+                  <i class="ph ph-book-open"></i>
+                  <span>Conteúdo<br>atualizado</span>
                 </div>
-                
-                <div class="trilhas-grid">
-                    <!-- Card 1 -->
-                    <div class="trilha-card fade-up">
-                        <div class="trilha-icon"><i class="ph-duotone ph-users-three"></i></div>
-                        <h3 class="trilha-title">Liderança</h3>
-                        <p class="trilha-desc">Desenvolva líderes inspiradores e times de alta performance.</p>
-                        <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="trilha-card fade-up delay-100">
-                        <div class="trilha-icon"><i class="ph-duotone ph-users"></i></div>
-                        <h3 class="trilha-title">Gestão de Pessoas</h3>
-                        <p class="trilha-desc">Engajamento, cultura e performance que geram valor.</p>
-                        <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="trilha-card fade-up delay-200">
-                        <div class="trilha-icon"><i class="ph-duotone ph-target"></i></div>
-                        <h3 class="trilha-title">Planejamento Estratégico</h3>
-                        <p class="trilha-desc">Transforme estratégia em ação e resultados sustentáveis.</p>
-                        <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div class="trilha-card fade-up delay-300">
-                        <div class="trilha-icon"><i class="ph-duotone ph-shopping-cart"></i></div>
-                        <h3 class="trilha-title">Merchandising no PDV</h3>
-                        <p class="trilha-desc">Técnicas e práticas para impulsionar vendas e experiência no ponto de venda.</p>
-                        <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
-                    </div>
-                    
-                    <!-- Card 5 -->
-                    <div class="trilha-card fade-up delay-400">
-                        <div class="trilha-icon"><i class="ph-duotone ph-brain"></i></div>
-                        <h3 class="trilha-title">Desenvolvimento Humano</h3>
-                        <p class="trilha-desc">Autoconhecimento, comunicação e inteligência emocional.</p>
-                        <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
-                    </div>
+                <div class="mobile-benefit-item">
+                  <i class="ph ph-chart-line-up"></i>
+                  <span>Aprendizado<br>aplicável</span>
                 </div>
+                <div class="mobile-benefit-item">
+                  <i class="ph ph-certificate"></i>
+                  <span>Certificados<br>reconhecidos</span>
+                </div>
+                <div class="mobile-benefit-item">
+                  <i class="ph ph-users"></i>
+                  <span>Comunidade<br>ativa</span>
+                </div>
+              </div>
+              
+              <!-- Hero Mobile Footer Row -->
+              <div class="hero-mobile-footer-row">
+                <span>APRENDA COM <span class="text-accent-alt">ESPECIALISTAS</span></span>
+                <div class="row-divider"></div>
+                <span>APLIQUE NA <span class="text-accent-alt">PRÁTICA</span></span>
+                <div class="row-divider"></div>
+                <span>EVOLUA <span class="text-accent-alt">SEMPRE</span></span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- PARA EMPRESAS -->
-        <section class="secao-incompany" id="incompany">
-            <div class="container">
-                <!-- Header da Seção -->
-                <div class="incompany-header fade-up">
-                    <span class="destaque-label text-accent">Compromisso com o Agronegócio</span>
-                    <h2 class="incompany-title">Conectando Lideranças para Fortalecer o Futuro da Agroindústria</h2>
-                    <p class="incompany-description">Nosso compromisso é capacitar produtores e indústrias para impulsionar a verticalização regional, promovendo o desenvolvimento sustentável por meio de conexões estratégicas, tecnologia e inteligência de mercado.</p>
-                </div>
-                
-                <!-- Grid de Conteúdo -->
-                <div class="incompany-grid-container">
-                    <!-- Esquerda: Vídeo -->
-                    <div class="incompany-media has-video fade-up">
-                        <video autoplay loop muted playsinline controls class="incompany-portrait-img" style="object-fit: cover; object-position: center top; width: 100%; height: 100%;">
-                            <source src="assets/Videos/Posicionamento-profissional.webm" type="video/webm">
-                            <source src="assets/Videos/Posicionamento-profissional.mp4" type="video/mp4">
-                            Seu navegador não suporta a tag de vídeo.
-                        </video>
-                    </div>
-                    
-                    <!-- Centro: Lista Detalhada -->
-                    <div class="incompany-body fade-up delay-100">
-                        <ul class="incompany-features-list">
-                            <li>
-                                <i class="ph ph-trend-up"></i>
-                                <div>
-                                    <h4>Alianças e Conexões Estratégicas</h4>
-                                    <p>Participação ativa em debates setoriais para consolidar parcerias fundamentais ao avanço socioeconômico regional.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-cpu"></i>
-                                <div>
-                                    <h4>Tecnologia Aplicada ao Campo</h4>
-                                    <p>Integração de inovações e processos modernos que ampliam a produtividade e a competitividade do produtor rural.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-chats"></i>
-                                <div>
-                                    <h4>Verticalização da Produção</h4>
-                                    <p>Apoio no planejamento industrial para reter valor na região, transformando a produção primária em produtos manufaturados de alto valor.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-leaf"></i>
-                                <div>
-                                    <h4>Desenvolvimento Sustentável</h4>
-                                    <p>Estruturação de estratégias inteligentes de mercado que alinham crescimento econômico a práticas de preservação de longo prazo.</p>
-                                </div>
-                            </li>
-                        </ul>
-                        
-                        <div class="incompany-cta">
-                            <a href="#contato" class="btn btn-primary">Falar com a Nossa Equipe <i class="ph ph-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Direita: Texto Vertical Decorativo -->
-                    <div class="incompany-vertical-text">
-                        <span>AGRO &amp; INOVAÇÃO</span>
-                    </div>
-                </div>
+      <!-- NOSSAS TRILHAS SECTION -->
+      <section class="trilhas" id="cursos">
+        <div class="container">
+          <div class="section-header-flex fade-up">
+            <h2 class="section-title">Nossas Trilhas</h2>
+            <a href="#" class="link-accent"
+              >Ver todos os cursos <i class="ph ph-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="trilhas-grid">
+            <!-- Card 1 -->
+            <div class="trilha-card fade-up">
+              <div class="trilha-icon">
+                <i class="ph-duotone ph-users-three"></i>
+              </div>
+              <h3 class="trilha-title">Liderança</h3>
+              <p class="trilha-desc">
+                Desenvolva líderes inspiradores e times de alta performance.
+              </p>
+              <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
             </div>
-        </section>
 
-        <!-- APRENDA DO SEU JEITO / APP DA EMPRESA -->
-        <section class="secao-plataforma" id="plataforma">
-            <div class="container">
-                <div class="plataforma-grid-container">
-                    <!-- Esquerda: Informações do Aplicativo -->
-                    <div class="plataforma-content fade-up">
-                        <span class="destaque-label-app">App da Empresa</span>
-                        <h2 class="plataforma-title">Mais praticidade na <span class="text-highlight">palma da sua mão</span></h2>
-                        <p class="plataforma-description">Com o nosso aplicativo, você acompanha tudo o que precisa de onde estiver, com segurança, agilidade e uma experiência completa.</p>
-                        
-                        <!-- Grid de Mini Benefícios -->
-                        <div class="plataforma-mini-features">
-                            <div class="mini-feature-item">
-                                <div class="mini-feature-icon">
-                                    <i class="ph ph-clipboard-text"></i>
-                                </div>
-                                <p>Acompanhe suas informações em tempo real</p>
-                            </div>
-                            <div class="mini-feature-item">
-                                <div class="mini-feature-icon">
-                                    <i class="ph ph-chart-bar"></i>
-                                </div>
-                                <p>Relatórios e indicadores de forma simples e rápida</p>
-                            </div>
-                            <div class="mini-feature-item">
-                                <div class="mini-feature-icon">
-                                    <i class="ph ph-bell"></i>
-                                </div>
-                                <p>Notificações importantes na hora certa</p>
-                            </div>
-                            <div class="mini-feature-item">
-                                <div class="mini-feature-icon">
-                                    <i class="ph ph-shield-check"></i>
-                                </div>
-                                <p>Segurança e proteção dos seus dados</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Botão CTA Principal -->
-                        <div class="plataforma-cta store-badges-wrapper">
-                            <a href="#" class="store-badge-link">
-                                <img src="assets/images/google-play-dowload.png" alt="Disponível no Google Play" class="store-badge-img" />
-                            </a>
-                            <a href="#" class="store-badge-link">
-                                <img src="assets/images/apple-dowload.png" alt="Baixar na App Store" class="store-badge-img" />
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Direita: Mockup de Dispositivos -->
-                    <div class="plataforma-media-wrapper fade-up delay-200">
-                        <div class="dots-decoration"></div>
-                        <img src="assets/images/aplicativo.png" alt="Aplicativo Axia Empresa" class="plataforma-mockup-img" />
-                    </div>
-                </div>
+            <!-- Card 2 -->
+            <div class="trilha-card fade-up delay-100">
+              <div class="trilha-icon"><i class="ph-duotone ph-users"></i></div>
+              <h3 class="trilha-title">Gestão de Pessoas</h3>
+              <p class="trilha-desc">
+                Engajamento, cultura e performance que geram valor.
+              </p>
+              <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
             </div>
-        </section>
 
-        <!-- CERTIFICAÇÕES -->
-        <section class="secao-certificacoes" id="sobre">
-            <div class="container">
-                <!-- Header da Seção -->
-                <div class="certificacoes-header fade-up">
-                    <span class="destaque-label-app" style="background-color: rgba(0, 143, 122, 0.1); color: #008F7A; border: 1px solid rgba(0, 143, 122, 0.2);">Garantia de Excelência</span>
-                    <h2 class="certificacoes-title">Nossos Selos e Certificações</h2>
-                    <p class="certificacoes-subtitle">Nossas práticas corporativas e programas de capacitação são chancelados por selos de excelência, assegurando conformidade legal, diversidade, integridade e governança de alto nível.</p>
-                </div>
-                
-                <!-- Grid de Certificados -->
-                <div class="certificacoes-grid">
-                    
-                    <!-- Certificado 1: Abrangem -->
-                    <div class="certificacao-item-card fade-up delay-100" onclick="openCertModal('assets/images/certificados/abrangem.png', 'Selo Abrangem - Associação de Integração Nacional')">
-                        <div class="cert-badge-wrapper">
-                            <img src="assets/images/certificados/abrangem.png" alt="Selo Abrangem" class="cert-badge-img" />
-                        </div>
-                        <h4>Selo Abrangem</h4>
-                        <p>Padrão nacional reconhecido na gestão e qualidade de treinamentos corporativos de excelência.</p>
-                        <span class="cert-zoom-hint"><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span>
-                    </div>
-                    
-                    <!-- Certificado 2: LGPD -->
-                    <div class="certificacao-item-card fade-up delay-150" onclick="openCertModal('assets/images/certificados/certificado-lgpd.png', 'Certificação LGPD - Lei Geral de Proteção de Dados')">
-                        <div class="cert-badge-wrapper">
-                            <img src="assets/images/certificados/certificado-lgpd.png" alt="Certificação LGPD" class="cert-badge-img" />
-                        </div>
-                        <h4>Certificação LGPD</h4>
-                        <p>Conformidade completa e segurança de dados auditada sob as diretrizes da legislação nacional.</p>
-                        <span class="cert-zoom-hint"><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span>
-                    </div>
-                    
-                    <!-- Certificado 3: Certificação da Mulher -->
-                    <div class="certificacao-item-card fade-up delay-200" onclick="openCertModal('assets/images/certificados/certificado-mulher.png', 'Certificação da Mulher - Equidade e Liderança Feminina')">
-                        <div class="cert-badge-wrapper">
-                            <img src="assets/images/certificados/certificado-mulher.png" alt="Certificação da Mulher" class="cert-badge-img" />
-                        </div>
-                        <h4>Liderança Feminina</h4>
-                        <p>Fomento ativo e comprovado à igualdade de gênero, equidade e inclusão no ambiente de trabalho.</p>
-                        <span class="cert-zoom-hint"><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span>
-                    </div>
-                    
-                    <!-- Certificado 4: Responsabilidade Social -->
-                    <div class="certificacao-item-card fade-up delay-250" onclick="openCertModal('assets/images/certificados/certificado-social.png', 'Certificação Social - Responsabilidade Socioambiental')">
-                        <div class="cert-badge-wrapper">
-                            <img src="assets/images/certificados/certificado-social.png" alt="Certificação Social" class="cert-badge-img" />
-                        </div>
-                        <h4>Responsabilidade Social</h4>
-                        <p>Práticas sustentáveis certificadas de governança ambiental, social e corporativa (ESG).</p>
-                        <span class="cert-zoom-hint"><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span>
-                    </div>
-                    
-                    <!-- Certificado 5: Conformidade Trabalhista -->
-                    <div class="certificacao-item-card fade-up delay-300" onclick="openCertModal('assets/images/certificados/certificado-trabalista.png', 'Conformidade Trabalhista e Segurança Jurídica')">
-                        <div class="cert-badge-wrapper">
-                            <img src="assets/images/certificados/certificado-trabalista.png" alt="Conformidade Trabalhista" class="cert-badge-img" />
-                        </div>
-                        <h4>Conformidade Trabalhista</h4>
-                        <p>Rigores éticos e conformidade legal assegurada nas relações de trabalho e contratações.</p>
-                        <span class="cert-zoom-hint"><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span>
-                    </div>
-                    
-                </div>
+            <!-- Card 3 -->
+            <div class="trilha-card fade-up delay-200">
+              <div class="trilha-icon">
+                <i class="ph-duotone ph-target"></i>
+              </div>
+              <h3 class="trilha-title">Planejamento Estratégico</h3>
+              <p class="trilha-desc">
+                Transforme estratégia em ação e resultados sustentáveis.
+              </p>
+              <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
             </div>
-        </section>
 
+            <!-- Card 4 -->
+            <div class="trilha-card fade-up delay-300">
+              <div class="trilha-icon">
+                <i class="ph-duotone ph-shopping-cart"></i>
+              </div>
+              <h3 class="trilha-title">Merchandising no PDV</h3>
+              <p class="trilha-desc">
+                Técnicas e práticas para impulsionar vendas e experiência no
+                ponto de venda.
+              </p>
+              <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="trilha-card fade-up delay-400">
+              <div class="trilha-icon"><i class="ph-duotone ph-brain"></i></div>
+              <h3 class="trilha-title">Desenvolvimento Humano</h3>
+              <p class="trilha-desc">
+                Autoconhecimento, comunicação e inteligência emocional.
+              </p>
+              <div class="trilha-arrow"><i class="ph ph-arrow-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARA EMPRESAS -->
+      <section class="secao-incompany" id="incompany">
+        <div class="container">
+          <!-- Header da Seção -->
+          <div class="incompany-header fade-up">
+            <span class="destaque-label text-accent"
+              >Compromisso com o Agronegócio</span
+            >
+            <h2 class="incompany-title">
+              Conectando Lideranças para Fortalecer o Futuro da Agroindústria
+            </h2>
+            <p class="incompany-description">
+              Nosso compromisso é capacitar produtores e indústrias para
+              impulsionar a verticalização regional, promovendo o
+              desenvolvimento sustentável por meio de conexões estratégicas,
+              tecnologia e inteligência de mercado.
+            </p>
+          </div>
+
+          <!-- Grid de Conteúdo -->
+          <div class="incompany-grid-container">
+            <!-- Esquerda: Vídeo -->
+            <div class="incompany-media has-video fade-up">
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                controls
+                class="incompany-portrait-img"
+                style="
+                  object-fit: cover;
+                  object-position: center top;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <source
+                  src="assets/Videos/Posicionamento-profissional.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="assets/Videos/Posicionamento-profissional.mp4"
+                  type="video/mp4"
+                />
+                Seu navegador não suporta a tag de vídeo.
+              </video>
+            </div>
+
+            <!-- Centro: Lista Detalhada -->
+            <div class="incompany-body fade-up delay-100">
+              <ul class="incompany-features-list">
+                <li>
+                  <i class="ph ph-trend-up"></i>
+                  <div>
+                    <h4>Alianças e Conexões Estratégicas</h4>
+                    <p>
+                      Participação ativa em debates setoriais para consolidar
+                      parcerias fundamentais ao avanço socioeconômico regional.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="ph ph-cpu"></i>
+                  <div>
+                    <h4>Tecnologia Aplicada ao Campo</h4>
+                    <p>
+                      Integração de inovações e processos modernos que ampliam a
+                      produtividade e a competitividade do produtor rural.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="ph ph-chats"></i>
+                  <div>
+                    <h4>Verticalização da Produção</h4>
+                    <p>
+                      Apoio no planejamento industrial para reter valor na
+                      região, transformando a produção primária em produtos
+                      manufaturados de alto valor.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="ph ph-leaf"></i>
+                  <div>
+                    <h4>Desenvolvimento Sustentável</h4>
+                    <p>
+                      Estruturação de estratégias inteligentes de mercado que
+                      alinham crescimento econômico a práticas de preservação de
+                      longo prazo.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="incompany-cta">
+                <a href="#contato" class="btn btn-primary"
+                  >Falar com a Nossa Equipe <i class="ph ph-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Direita: Texto Vertical Decorativo -->
+            <div class="incompany-vertical-text">
+              <span>AGRO &amp; INOVAÇÃO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APRENDA DO SEU JEITO / APP DA EMPRESA -->
+      <section class="secao-plataforma" id="plataforma">
+        <div class="container">
+          <div class="plataforma-grid-container">
+            <!-- Esquerda: Informações do Aplicativo -->
+            <div class="plataforma-content fade-up">
+              <span class="destaque-label-app">App da Empresa</span>
+              <h2 class="plataforma-title">
+                Mais praticidade na
+                <span class="text-highlight">palma da sua mão</span>
+              </h2>
+              <p class="plataforma-description">
+                Com o nosso aplicativo, você acompanha tudo o que precisa de
+                onde estiver, com segurança, agilidade e uma experiência
+                completa.
+              </p>
+
+              <!-- Grid de Mini Benefícios -->
+              <div class="plataforma-mini-features">
+                <div class="mini-feature-item">
+                  <div class="mini-feature-icon">
+                    <i class="ph ph-clipboard-text"></i>
+                  </div>
+                  <p>Acompanhe suas informações em tempo real</p>
+                </div>
+                <div class="mini-feature-item">
+                  <div class="mini-feature-icon">
+                    <i class="ph ph-chart-bar"></i>
+                  </div>
+                  <p>Relatórios e indicadores de forma simples e rápida</p>
+                </div>
+                <div class="mini-feature-item">
+                  <div class="mini-feature-icon">
+                    <i class="ph ph-bell"></i>
+                  </div>
+                  <p>Notificações importantes na hora certa</p>
+                </div>
+                <div class="mini-feature-item">
+                  <div class="mini-feature-icon">
+                    <i class="ph ph-shield-check"></i>
+                  </div>
+                  <p>Segurança e proteção dos seus dados</p>
+                </div>
+              </div>
+
+              <!-- Botão CTA Principal -->
+              <div class="plataforma-cta store-badges-wrapper">
+                <a href="#" class="store-badge-link">
+                  <img
+                    src="assets/images/google-play-dowload.png"
+                    alt="Disponível no Google Play"
+                    class="store-badge-img"
+                  />
+                </a>
+                <a href="#" class="store-badge-link">
+                  <img
+                    src="assets/images/apple-dowload.png"
+                    alt="Baixar na App Store"
+                    class="store-badge-img"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Direita: Mockup de Dispositivos -->
+            <div class="plataforma-media-wrapper fade-up delay-200">
+              <div class="dots-decoration"></div>
+              <img
+                src="assets/images/aplicativo.png"
+                alt="Aplicativo Axia Empresa"
+                class="plataforma-mockup-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICAÇÕES -->
+      <section class="secao-certificacoes" id="sobre">
+        <div class="container">
+          <!-- Header da Seção -->
+          <div class="certificacoes-header fade-up">
+            <span
+              class="destaque-label-app"
+              style="
+                background-color: rgba(0, 143, 122, 0.1);
+                color: #008f7a;
+                border: 1px solid rgba(0, 143, 122, 0.2);
+              "
+              >Garantia de Excelência</span
+            >
+            <h2 class="certificacoes-title">Nossos Selos e Certificações</h2>
+            <p class="certificacoes-subtitle">
+              Nossas práticas corporativas e programas de capacitação são
+              chancelados por selos de excelência, assegurando conformidade
+              legal, diversidade, integridade e governança de alto nível.
+            </p>
+          </div>
+
+          <!-- Grid de Certificados -->
+          <div class="certificacoes-grid">
+            <!-- Certificado 1: Abrangem -->
+            <div
+              class="certificacao-item-card fade-up delay-100"
+              onclick="
+                openCertModal(
+                  'assets/images/certificados/abrangem.png',
+                  'Selo Abrangem - Associação de Integração Nacional',
+                )
+              "
+            >
+              <div class="cert-badge-wrapper">
+                <img
+                  src="assets/images/certificados/abrangem.png"
+                  alt="Selo Abrangem"
+                  class="cert-badge-img"
+                />
+              </div>
+              <h4>Selo Abrangem</h4>
+              <p>
+                Padrão nacional reconhecido na gestão e qualidade de
+                treinamentos corporativos de excelência.
+              </p>
+              <span class="cert-zoom-hint"
+                ><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span
+              >
+            </div>
+
+            <!-- Certificado 2: LGPD -->
+            <div
+              class="certificacao-item-card fade-up delay-150"
+              onclick="
+                openCertModal(
+                  'assets/images/certificados/certificado-lgpd.png',
+                  'Certificação LGPD - Lei Geral de Proteção de Dados',
+                )
+              "
+            >
+              <div class="cert-badge-wrapper">
+                <img
+                  src="assets/images/certificados/certificado-lgpd.png"
+                  alt="Certificação LGPD"
+                  class="cert-badge-img"
+                />
+              </div>
+              <h4>Certificação LGPD</h4>
+              <p>
+                Conformidade completa e segurança de dados auditada sob as
+                diretrizes da legislação nacional.
+              </p>
+              <span class="cert-zoom-hint"
+                ><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span
+              >
+            </div>
+
+            <!-- Certificado 3: Certificação da Mulher -->
+            <div
+              class="certificacao-item-card fade-up delay-200"
+              onclick="
+                openCertModal(
+                  'assets/images/certificados/certificado-mulher.png',
+                  'Certificação da Mulher - Equidade e Liderança Feminina',
+                )
+              "
+            >
+              <div class="cert-badge-wrapper">
+                <img
+                  src="assets/images/certificados/certificado-mulher.png"
+                  alt="Certificação da Mulher"
+                  class="cert-badge-img"
+                />
+              </div>
+              <h4>Liderança Feminina</h4>
+              <p>
+                Fomento ativo e comprovado à igualdade de gênero, equidade e
+                inclusão no ambiente de trabalho.
+              </p>
+              <span class="cert-zoom-hint"
+                ><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span
+              >
+            </div>
+
+            <!-- Certificado 4: Responsabilidade Social -->
+            <div
+              class="certificacao-item-card fade-up delay-250"
+              onclick="
+                openCertModal(
+                  'assets/images/certificados/certificado-social.png',
+                  'Certificação Social - Responsabilidade Socioambiental',
+                )
+              "
+            >
+              <div class="cert-badge-wrapper">
+                <img
+                  src="assets/images/certificados/certificado-social.png"
+                  alt="Certificação Social"
+                  class="cert-badge-img"
+                />
+              </div>
+              <h4>Responsabilidade Social</h4>
+              <p>
+                Práticas sustentáveis certificadas de governança ambiental,
+                social e corporativa (ESG).
+              </p>
+              <span class="cert-zoom-hint"
+                ><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span
+              >
+            </div>
+
+            <!-- Certificado 5: Conformidade Trabalhista -->
+            <div
+              class="certificacao-item-card fade-up delay-300"
+              onclick="
+                openCertModal(
+                  'assets/images/certificados/certificado-trabalista.png',
+                  'Conformidade Trabalhista e Segurança Jurídica',
+                )
+              "
+            >
+              <div class="cert-badge-wrapper">
+                <img
+                  src="assets/images/certificados/certificado-trabalista.png"
+                  alt="Conformidade Trabalhista"
+                  class="cert-badge-img"
+                />
+              </div>
+              <h4>Conformidade Trabalhista</h4>
+              <p>
+                Rigores éticos e conformidade legal assegurada nas relações de
+                trabalho e contratações.
+              </p>
+              <span class="cert-zoom-hint"
+                ><i class="ph ph-magnifying-glass-plus"></i> Ampliar Selo</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer" id="contato">
-        <div class="container footer-container">
-            <div class="footer-col brand-col">
-            <div class="header-logo-container">
-                <img src="assets/images/logo/logo.png" alt="Logo AXIA GROUP">
-            </div>
-                <p class="footer-desc">Educação corporativa, liderança e gestão para empresas em crescimento.</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Entre em contato</h4>
-                <ul class="footer-links contact-links">
-                    <li><i class="ph ph-phone"></i> (11) 3181-0000</li>
-                    <li><i class="ph ph-envelope-simple"></i> contato@axiaacademy.com.br</li>
-                    <li><i class="ph ph-map-pin"></i> São Paulo - SP</li>
-                </ul>
-            </div>
-            
-            <div class="footer-col links-col">
-                <h4>Links rápidos</h4>
-                <div class="footer-links-grid">
-                    <ul class="footer-links">
-                        <li><a href="#cursos">Cursos</a></li>
-                        <li><a href="#incompany">Treinamentos In Company</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </ul>
-                    <ul class="footer-links">
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#depoimentos">Depoimentos</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-col social-col">
-                <h4>Siga-nos</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
-                </div>
-            </div>
+      <div class="container footer-container">
+        <div class="footer-col brand-col">
+          <div class="header-logo-container">
+            <img src="assets/images/logo/logo.png" alt="Logo AXIA GROUP" />
+          </div>
+          <p class="footer-desc">
+            Educação corporativa, liderança e gestão para empresas em
+            crescimento.
+          </p>
         </div>
+
+        <div class="footer-col">
+          <h4>Entre em contato</h4>
+          <ul class="footer-links contact-links">
+            <li><i class="ph ph-phone"></i> (11) 3181-0000</li>
+            <li>
+              <i class="ph ph-envelope-simple"></i> contato@axiaacademy.com.br
+            </li>
+            <li><i class="ph ph-map-pin"></i> São Paulo - SP</li>
+          </ul>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4>Links rápidos</h4>
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              <li><a href="#cursos">Cursos</a></li>
+              <li><a href="#incompany">Treinamentos In Company</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-col social-col">
+          <h4>Siga-nos</h4>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"
+              ><i class="ph-fill ph-linkedin-logo"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="ph-fill ph-instagram-logo"></i
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><i class="ph-fill ph-youtube-logo"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="ph-fill ph-facebook-logo"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Modal de Zoom de Certificado (Lightbox) -->
     <div id="certModal" class="cert-modal">
-        <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
-        <img class="cert-modal-content" id="certModalImg" src="" alt="Certificado Ampliado">
-        <div id="certModalCaption" class="cert-modal-caption"></div>
+      <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+      <img
+        class="cert-modal-content"
+        id="certModalImg"
+        src=""
+        alt="Certificado Ampliado"
+      />
+      <div id="certModalCaption" class="cert-modal-caption"></div>
     </div>
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>
