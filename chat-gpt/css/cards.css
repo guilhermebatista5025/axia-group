@@ -1,0 +1,300 @@
+/* ==========================================================
+   PARTNER CARD
+========================================================== */
+
+.partner-card{
+
+    position:absolute;
+
+    width:170px;
+    height:96px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        box-shadow .45s ease,
+        border-color .45s ease,
+        opacity .45s ease;
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.03)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.45),
+
+        inset 0 1px 1px rgba(255,255,255,.08);
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.partner-card img{
+
+    width:62%;
+
+    transition:transform .45s ease;
+
+    filter:brightness(1);
+
+}
+
+
+/* ==========================================================
+   TOP LIGHT
+========================================================== */
+
+.partner-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.18),
+
+            transparent 45%
+
+        );
+
+    opacity:.35;
+
+}
+
+
+/* ==========================================================
+   SHINE EFFECT
+========================================================== */
+
+.partner-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-180%;
+
+    top:0;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.35),
+
+            transparent
+
+        );
+
+    transform:skewX(-25deg);
+
+}
+
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+.partner-card .card-glow{
+
+    position:absolute;
+
+    inset:-30%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(79,124,255,.22),
+
+            transparent 70%
+
+        );
+
+    filter:blur(45px);
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+/* ==========================================================
+   BORDER GRADIENT
+========================================================== */
+
+.partner-card .gradient-border{
+
+    position:absolute;
+
+    inset:0;
+
+    padding:1px;
+
+    border-radius:inherit;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(79,124,255,.8),
+
+            rgba(35,245,197,.6),
+
+            transparent
+
+        );
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) content-box,
+
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+    opacity:.35;
+
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.partner-card:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.08);
+
+    border-color:rgba(79,124,255,.45);
+
+    box-shadow:
+
+        0 30px 70px rgba(79,124,255,.25),
+
+        0 10px 30px rgba(0,0,0,.45);
+
+}
+
+
+.partner-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+.partner-card:hover .card-glow{
+
+    opacity:1;
+
+}
+
+
+/* ==========================================================
+   SHINE ANIMATION
+========================================================== */
+
+.partner-card:hover::after{
+
+    animation:shine 1.2s linear;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-180%;
+
+    }
+
+    to{
+
+        left:220%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   DEPTH STATES
+========================================================== */
+
+.partner-card.front{
+
+    z-index:30;
+
+    opacity:1;
+
+    filter:blur(0);
+
+}
+
+.partner-card.middle{
+
+    opacity:.75;
+
+    filter:blur(.3px);
+
+}
+
+.partner-card.back{
+
+    opacity:.35;
+
+    filter:blur(2px);
+
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Axia Partners</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/orbit.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<section class="partners">
+
+    <!-- Glow -->
+    <div class="bg-glow glow-left"></div>
+    <div class="bg-glow glow-right"></div>
+
+    <div class="noise"></div>
+
+    <div class="light-beam"></div>
+
+    <!-- Partículas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Grid -->
+    <div class="grid-overlay"></div>
+
+    <!-- Conteúdo -->
+    <div class="container">
+
+        <!-- Texto -->
+
+        <div class="partners-content">
+
+            <span class="subtitle">
+                NOSSOS PARCEIROS
+            </span>
+
+            <h2>
+
+                Grandes empresas
+                <br>
+                caminham conosco.
+
+            </h2>
+
+            <p>
+
+                Trabalhamos ao lado das maiores empresas do mercado,
+                entregando soluções inteligentes em tecnologia,
+                infraestrutura e inovação.
+
+            </p>
+
+        </div>
+
+        <!-- Orbita -->
+
+        <div class="orbit-wrapper">
+
+            <!-- esfera -->
+
+            <div id="sphere"></div>
+
+            <!-- Orbitas -->
+
+            <svg class="orbit-svg" viewBox="0 0 900 900">
+
+                <ellipse
+                    class="orbit orbit-back"
+                    cx="450"
+                    cy="450"
+                    rx="340"
+                    ry="140"
+                />
+
+                <ellipse
+                    class="orbit orbit-middle"
+                    cx="450"
+                    cy="450"
+                    rx="270"
+                    ry="110"
+                />
+
+                <ellipse
+                    class="orbit orbit-front"
+                    cx="450"
+                    cy="450"
+                    rx="200"
+                    ry="80"
+                />
+
+            </svg>
+
+            <!-- Cards -->
+
+            <div class="partner-card microsoft">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/microsoft.svg">
+            </div>
+
+            <div class="partner-card google">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/google.svg">
+            </div>
+
+            <div class="partner-card aws">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/aws.svg">
+            </div>
+
+            <div class="partner-card meta">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/meta.svg">
+            </div>
+
+            <div class="partner-card spotify">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/spotify.svg">
+            </div>
+
+            <div class="partner-card intel">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/intel.svg">
+            </div>
+
+            <div class="partner-card ibm">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/ibm.svg">
+            </div>
+
+            <div class="partner-card samsung">
+                <div class="gradient-border"></div>
+                <div class="card-glow"></div>
+                <img src="assets/logos/samsung.svg">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

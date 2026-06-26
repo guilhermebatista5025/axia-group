@@ -1,0 +1,232 @@
+/* ==========================================================
+   BACKGROUND BASE
+========================================================== */
+
+.partners{
+
+    background:
+        radial-gradient(circle at top,#0D1B33 0%,#050912 35%,#02040A 100%);
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grid-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:radial-gradient(circle,black 20%,transparent 90%);
+
+    opacity:.35;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   GLOW LEFT
+========================================================== */
+
+.glow-left{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    left:-250px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border-radius:50%;
+
+    background:#1D7BFF;
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+}
+
+
+/* ==========================================================
+   GLOW RIGHT
+========================================================== */
+
+.glow-right{
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    right:-250px;
+
+    top:45%;
+
+    border-radius:50%;
+
+    background:#16E8D3;
+
+    filter:blur(170px);
+
+    opacity:.13;
+
+}
+
+
+/* ==========================================================
+   EXTRA LIGHT
+========================================================== */
+
+.partners::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(79,124,255,.14),
+            transparent 70%);
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   VINHETA
+========================================================== */
+
+.partners::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle,
+            transparent 45%,
+            rgba(0,0,0,.55));
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   STARS
+========================================================== */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    opacity:.75;
+
+}
+
+
+/* ==========================================================
+   LIGHT EFFECT
+========================================================== */
+
+.light-beam{
+
+    position:absolute;
+
+    width:700px;
+
+    height:220px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:
+
+        translate(-50%,-50%)
+
+        rotate(-25deg);
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.04),
+
+            transparent
+
+        );
+
+    filter:blur(50px);
+
+}
+
+
+/* ==========================================================
+   NOISE
+========================================================== */
+
+.noise{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:url("../assets/textures/noise.png");
+
+    opacity:.035;
+
+    mix-blend-mode:soft-light;
+
+    pointer-events:none;
+
+}

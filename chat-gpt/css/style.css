@@ -1,0 +1,314 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#02040A;
+
+    color:#FFF;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+/* ==========================================================
+   ROOT
+========================================================== */
+
+:root{
+
+    --primary:#4F7CFF;
+    --secondary:#23F5C5;
+
+    --background:#02040A;
+    --background-light:#08111F;
+
+    --white:#FFFFFF;
+
+    --text:#C7CEDB;
+    --text-light:#9AA4B4;
+
+    --glass:rgba(255,255,255,.05);
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 20px 80px rgba(0,0,0,.35);
+
+    --radius:24px;
+
+    --transition:.4s ease;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050912;
+
+}
+
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(1400px,90%);
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.partners{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.partners-content{
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:520px;
+
+    z-index:20;
+
+}
+
+
+.subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--secondary);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+
+}
+
+.subtitle::before{
+
+    content:"";
+
+    width:40px;
+
+    height:2px;
+
+    background:var(--secondary);
+
+}
+
+
+/* ==========================================================
+   TITLES
+========================================================== */
+
+.partners h2{
+
+    font-size:4.2rem;
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    margin-bottom:30px;
+
+}
+
+
+.partners p{
+
+    color:var(--text);
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    max-width:460px;
+
+}
+
+
+/* ==========================================================
+   ORBIT WRAPPER
+========================================================== */
+
+.orbit-wrapper{
+
+    position:relative;
+
+    width:900px;
+
+    height:900px;
+
+    margin-left:auto;
+
+}
+
+
+/* ==========================================================
+   SPHERE
+========================================================== */
+
+#sphere{
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    z-index:10;
+
+}
+
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.partner-card{
+
+    position:absolute;
+
+    width:150px;
+
+    height:85px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:15;
+
+    transition:.35s;
+
+}
+
+.partner-card img{
+
+    width:65%;
+
+    object-fit:contain;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   HELPERS
+========================================================== */
+
+.hidden{
+
+    opacity:0;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
