@@ -1911,7 +1911,7 @@ h6 {
 
 .footer-container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   gap: 2rem;
 }
 
@@ -1937,19 +1937,25 @@ h6 {
   max-width: 80%;
 }
 
+.footer-socials {
+  margin-top: 1.5rem;
+}
+
 .footer-col h4 {
   color: #ffffff;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.contact-links {
+.contact-links,
+.location-links {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.contact-links li {
+.contact-links li,
+.location-links li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1957,7 +1963,8 @@ h6 {
   font-size: 0.85rem;
 }
 
-.contact-links i {
+.contact-links i,
+.location-links i {
   color: #008f7a;
   font-size: 1.2rem;
 }
@@ -1989,22 +1996,25 @@ h6 {
 }
 
 .social-links a {
-  width: 35px;
-  height: 35px;
-  background: #008f7a;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 1rem;
-  transition: 0.2s ease;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links a:hover {
-  background: #ffffff;
-  color: #008f7a;
-  transform: translateY(-2px);
+  background: #008f7a;
+  color: #ffffff;
+  border-color: #008f7a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 143, 122, 0.4);
 }
 
 /* ==========================================================================
