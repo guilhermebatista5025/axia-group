@@ -263,7 +263,7 @@ h6 {
 
 .header-actions {
   position: absolute;
-  right: -4rem;
+  right: -7rem;
   top: 75%;
   transform: translateY(-50%);
   display: flex;

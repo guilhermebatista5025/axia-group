@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Código de Conduta da AXIA GROUP | ACADEMY. Nossos compromissos com a ética, integridade e responsabilidade."
+    />
+    <title data-i18n="conduct_page_title">Código de Conduta - AXIA GROUP | ACADEMY</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css?v=1.33" />
+    <link rel="stylesheet" href="../css/conduct.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header-container">
+        <div class="header-logo-container">
+          <a href="../index.html">
+            <img src="../assets/images/logo/logo.png" alt="Logo AXIA GROUP" />
+          </a>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="../index.html#inicio" class="nav-link" data-i18n="nav_home">Início</a></li>
+            <li><a href="../index.html#cursos" class="nav-link" data-i18n="nav_courses">Cursos</a></li>
+            <li><a href="../index.html#sobre" class="nav-link" data-i18n="nav_about">Quem Somos</a></li>
+            <li><a href="Equipe.html" class="nav-link" data-i18n="nav_team">Equipe</a></li>
+            <li><a href="codigo-de-condulta.html" class="nav-link active" data-i18n="nav_conduct">Código de Conduta</a></li>
+            <li><a href="contato.html" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-selector">
+            <a href="#" class="lang-flag active" title="Português" data-lang="pt">
+              <img src="https://flagcdn.com/br.svg" alt="Português" />
+            </a>
+            <a href="#" class="lang-flag" title="Español" data-lang="es">
+              <img src="https://flagcdn.com/es.svg" alt="Español" />
+            </a>
+            <a href="#" class="lang-flag" title="Inglês" data-lang="en">
+              <img src="https://flagcdn.com/gb.svg" alt="Inglês" />
+            </a>
+          </div>
+          <a href="#" class="btn btn-outline-primary" data-i18n="btn_login">Entrar</a>
+          <a href="https://wa.me/5527981193839" target="_blank" class="btn btn-primary" data-i18n="btn_speak_team">Falar com a Equipe</a>
+          <button
+            class="btn-icon mobile-toggle"
+            aria-label="Menu"
+            id="mobile-toggle"
+          >
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="conduct-main">
+      <div class="container">
+        <div class="conduct-layout">
+          
+          <!-- LEFT COLUMN (STICKY) -->
+          <div class="conduct-left-col">
+            <h1 data-i18n="conduct_hero_title" style="margin-bottom: 1.5rem; color: #0a1d3a; font-weight: 700; font-size: 2.5rem; line-height: 1.2;">Código de Conduta</h1>
+            
+            <!-- STICKY SIDEBAR -->
+            <aside class="conduct-sidebar">
+            <h3 class="conduct-sidebar-title" data-i18n="conduct_sidebar_title">Navegação</h3>
+            <nav class="conduct-nav">
+              <button onclick="scrollToCard('seguranca', this)" class="conduct-nav-item active">
+                <i class="ph ph-shield-checkered"></i> <span data-i18n="conduct_nav_1">Saúde e Segurança</span>
+              </button>
+              <button onclick="scrollToCard('conflito', this)" class="conduct-nav-item">
+                <i class="ph ph-users-three"></i> <span data-i18n="conduct_nav_2">Conflito de Interesse</span>
+              </button>
+              <button onclick="scrollToCard('parentes', this)" class="conduct-nav-item">
+                <i class="ph ph-briefcase"></i> <span data-i18n="conduct_nav_3">Contratação de Parentes</span>
+              </button>
+              <button onclick="scrollToCard('confidencial', this)" class="conduct-nav-item">
+                <i class="ph ph-lock"></i> <span data-i18n="conduct_nav_4">Informações Confidenciais</span>
+              </button>
+              <button onclick="scrollToCard('socios', this)" class="conduct-nav-item">
+                <i class="ph ph-scales"></i> <span data-i18n="conduct_nav_5">Relações Societárias</span>
+              </button>
+              <button onclick="scrollToCard('clientes', this)" class="conduct-nav-item">
+                <i class="ph ph-handshake"></i> <span data-i18n="conduct_nav_6">Clientes e Fornecedores</span>
+              </button>
+              <button onclick="scrollToCard('publico', this)" class="conduct-nav-item">
+                <i class="ph ph-buildings"></i> <span data-i18n="conduct_nav_7">Setor Público</span>
+              </button>
+              <button onclick="scrollToCard('concorrencia', this)" class="conduct-nav-item">
+                <i class="ph ph-trend-up"></i> <span data-i18n="conduct_nav_8">Relações com a Concorrência</span>
+              </button>
+              <button onclick="scrollToCard('comunidade', this)" class="conduct-nav-item">
+                <i class="ph ph-globe"></i> <span data-i18n="conduct_nav_9">Relações com a Comunidade</span>
+              </button>
+              <button onclick="scrollToCard('midia', this)" class="conduct-nav-item">
+                <i class="ph ph-megaphone"></i> <span data-i18n="conduct_nav_10">Relações com a Mídia</span>
+              </button>
+              <button onclick="scrollToCard('sustentabilidade', this)" class="conduct-nav-item">
+                <i class="ph ph-leaf"></i> <span data-i18n="conduct_nav_11">Sustentabilidade</span>
+              </button>
+              <button onclick="scrollToCard('dados', this)" class="conduct-nav-item">
+                <i class="ph ph-database"></i> <span data-i18n="conduct_nav_12">Proteção de Dados</span>
+              </button>
+              <button onclick="scrollToCard('respeito', this)" class="conduct-nav-item">
+                <i class="ph ph-heart"></i> <span data-i18n="conduct_nav_13">Respeito e Diversidade</span>
+              </button>
+              <button onclick="scrollToCard('transparencia', this)" class="conduct-nav-item">
+                <i class="ph ph-eye"></i> <span data-i18n="conduct_nav_14">Transparência</span>
+              </button>
+              <button onclick="scrollToCard('penalidades', this)" class="conduct-nav-item">
+                <i class="ph ph-warning-octagon"></i> <span data-i18n="conduct_nav_15">Cumprimento e Penalidades</span>
+              </button>
+            </nav>
+          </aside>
+          </div>
+
+          <!-- CONTENT CARDS -->
+          <div class="conduct-content">
+            
+
+
+
+            <!-- Intro text -->
+            <div class="conduct-card" style="padding: 2rem;">
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_intro_p">
+                  O Código de Conduta da Axia Group expressa nossos compromissos com a ética, a integridade e a responsabilidade em todas as nossas ações e relacionamentos. Ele orienta o comportamento de todos os colaboradores, parceiros, sócios, fornecedores e demais partes interessadas, reforçando os valores que sustentam nossa atuação.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 1: Saúde e Segurança -->
+            <div class="conduct-card" id="seguranca">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-shield-checkered"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_1">1.1. Saúde e Segurança</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_1_p1">
+                  A Axia Group promove um ambiente de trabalho mais seguro e saudável, adotando práticas que previnem acidentes e protegem a integridade física e mental dos colaboradores. Cumprimos todas as normas regulamentadoras e incentivamos uma cultura de prevenção.
+                </p>
+                <p data-i18n="conduct_text_1_p2">
+                  No ambiente de trabalho apresentamos as normas de moralidade (embriaguez, uso de drogas e desavenças). O uso de drogas ilícitas compromete a atuação do profissional e é crime, além de prejudicar a saúde e a vida de seus usuários, comprometendo o ambiente de trabalho e causando risco aos demais.
+                </p>
+                <p data-i18n="conduct_text_1_p3">
+                  Será reportado à liderança quaisquer condições inseguras e atos desagradáveis no ambiente de trabalho. Para garantirmos as tratativas e ações necessárias em quaisquer riscos, ocorrências ou situações inseguras, utilizamos o formulário disponível para registrar a ação.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Conflito de Interesse -->
+            <div class="conduct-card" id="conflito">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-users-three"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_2">1.2. Conflito de Interesse</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_2_p1">
+                  É responsabilidade de todos os colaboradores evitar situações em que interesses pessoais possam interferir nas decisões profissionais. Todos os interesses pessoais devem compor-se com interesses da Axia Group e vice-versa.
+                </p>
+                <p data-i18n="conduct_text_2_p2">
+                  Qualquer situação que configure ou possa configurar conflito de interesse deve ser imediatamente comunicada à liderança ou ao comitê de ética.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Contratação de Familiares -->
+            <div class="conduct-card" id="parentes">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-briefcase"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_3">1.3. Contratação de Familiares e Parentes</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_3_p1">
+                  A contratação de familiares e parentes é permitida, desde que respeitados critérios de meritocracia e não haja relação direta de subordinação ou influência nas decisões de contratação, promoção ou avaliação de desempenho. A contratação será analisada pela diretoria da empresa desde que não haja grau de parentesco direto gerando influências negativas.
+                </p>
+                <p data-i18n="conduct_text_3_p2">
+                  Estes princípios de contratação justa serão aplicados a todos os aspectos profissionais, incluindo remuneração, promoções e transferências. Filhos de colaboradores da Axia Group poderão ter prioridade para vagas de estágio ou de curta duração (temporários de férias), desde que sejam igualmente qualificados em relação aos outros candidatos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: Informações Confidenciais -->
+            <div class="conduct-card" id="confidencial">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-lock"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_4">1.4. Informações Confidenciais</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_4_p1">
+                  As relações da Axia Group e seus prestadores de serviços e colaboradores são fundamentadas no princípio da confiança. As informações confidenciais consistem em toda e qualquer informação que não seja de conhecimento público.
+                </p>
+                <p data-i18n="conduct_text_4_p2">
+                  Nelas se incluem: segredos comerciais, patentes, planos de negócios, planos de marketing e serviços, pesquisas com consumidores, ideias de processos de fabricação, design, dados contábeis, tokens e senhas, identidade de clientes, base de dados, registros, informações salariais e quaisquer dados financeiros ou bancários.
+                </p>
+                <p data-i18n="conduct_text_4_p3">
+                  Adiciona-se ainda a cláusula de "non compete" (não concorrência) por toda a vigência da relação de prestação de serviços e por até 2 (dois) anos após o término da mesma.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 5: Relações Societárias -->
+            <div class="conduct-card" id="socios">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-scales"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_5">2. Relações com Sócios/Acionistas e Conselho Consultivo</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_5_p1">
+                  Prezamos pela transparência, equidade, responsabilidade, empatia e convergência de interesse. As deliberações são sempre formalizadas por escrito e em observância à decisão da maioria em assembleia ou reunião corporativa.
+                </p>
+                <p data-i18n="conduct_text_5_p2">
+                  Qualquer divergência será dirimida em respeito ao melhor interesse da Axia Group. Esses princípios garantem uma governança e gestão empresarial íntegra, livre de práticas ilícitas.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 6: Clientes e Fornecedores -->
+            <div class="conduct-card" id="clientes">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-handshake"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_6">3. Relações com Clientes e Fornecedores</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_6_p1">
+                  Nossa relação com os fornecedores e parceiros de negócios é pautada por boa-fé, honestidade, ética, transparência e respeito, buscando contribuir positivamente para o desenvolvimento social e econômico das regiões onde atuamos.
+                </p>
+                <h5 style="margin-top: 1rem; color: #0a1d3a; font-weight: 600;" data-i18n="conduct_title_6_1">Brindes e Presentes:</h5>
+                <p data-i18n="conduct_text_6_p2">
+                  A troca de presentes e hospitalidades não é incentivada, mas é permitida em contextos corporativos desde que não seja utilizada para influenciar decisões ou obter vantagens. É proibida a aceitação de dinheiro ou equivalentes. A aceitação do presente deve ser comunicada imediatamente ao superior.
+                </p>
+                <h5 style="margin-top: 1rem; color: #0a1d3a; font-weight: 600;" data-i18n="conduct_title_6_2">Interações com Clientes:</h5>
+                <p data-i18n="conduct_text_6_p3">
+                  Refeições ou coff breaks com clientes devem ocorrer de forma transparente e oportuna. Não é permitido o consumo de bebidas alcoólicas ou drogas ilícitas nesses encontros corporativos, visando manter a postura profissional e mitigar riscos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 7: Setor Público -->
+            <div class="conduct-card" id="publico">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-buildings"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_7">4. Relações com Setor Público</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_7">
+                  A interação com agentes públicos deve ser conduzida com absoluta integridade e em conformidade com as leis anticorrupção vigentes, especialmente a Lei nº 12.846/2013 (Lei Anticorrupção Brasileira). É vedada qualquer forma de facilitação, suborno ou desvirtuamento ético.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 8: Relações com a Concorrência -->
+            <div class="conduct-card" id="concorrencia">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-trend-up"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_8">5. Relações com a Concorrência</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_8">
+                  Atuamos de forma leal e transparente no mercado. Repudiamos veementemente práticas anticompetivas como a formação de cartéis, concorrência desleal (dumping), espionagem industrial ou difamação comercial. Respeitamos a livre concorrência como valor essencial de mercado.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 9: Relações com a Comunidade -->
+            <div class="conduct-card" id="comunidade">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-globe"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_9">6. Relações com a Comunidade</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_9">
+                  A Axia Group contribui ativamente para o desenvolvimento social das comunidades onde está presente. Incentivamos ações voluntárias, projetos sociais e práticas que promovam a inclusão, diversidade e o bem-estar coletivo, porque acreditamos que a Educação é o único caminho para termos uma sociedade justa.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 10: Relações com a Mídia -->
+            <div class="conduct-card" id="midia">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-megaphone"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_10">7. Relações com a Mídia</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_10_p1">
+                  A comunicação com a imprensa deve ser feita exclusivamente por porta-vozes autorizados. Não permitimos a utilização de sistemas eletrônicos corporativos para transmitir ou armazenar conteúdos que prejudiquem as atividades de trabalho.
+                </p>
+                <p data-i18n="conduct_text_10_p2">
+                  As redes sociais pessoais ou profissionais não devem ser utilizadas para expor informações privadas e confidenciais da Axia Group ou de seus clientes. Participações em eventos representando a instituição devem ser validadas previamente. Evitamos discussões polêmicas ou debates pessoais em grupos formais de trabalho.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 11: Sustentabilidade -->
+            <div class="conduct-card" id="sustentabilidade">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-leaf"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_11">8. Sustentabilidade</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_11_p1">
+                  Comprometemo-nos com a sustentabilidade em todas as nossas operações, baseando-nos no tripé (ESG):
+                </p>
+                <ul>
+                  <li data-i18n="conduct_text_11_li1"><strong>Ambiental:</strong> Operações em conformidade legal com a legislação ambiental.</li>
+                  <li data-i18n="conduct_text_11_li2"><strong>Social:</strong> Relações baseadas na confiança, respeito mútuo e compromisso social comunitário.</li>
+                  <li data-i18n="conduct_text_11_li3"><strong>Econômica:</strong> Foco em alta performance e entrega constante de valor e excelência aos clientes.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card 12: Proteção de Dados -->
+            <div class="conduct-card" id="dados">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-database"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_12">9. Proteção de Dados</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_12_p1">
+                  Cumprimos rigorosamente a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), além das leis antiterrorismo (Lei nº 13.260/2016) e anticorrupção aplicáveis. Os dados obtidos dentro da empresa não podem ser compartilhados com terceiros a qualquer título.
+                </p>
+                <p data-i18n="conduct_text_12_p2">
+                  É dever de todos adotar precauções de segurança: evitar o uso de pen drives ou dispositivos de armazenamento externos não autorizados, utilizar soluções em nuvem homologadas pela empresa, guardar sigilo de senhas e bloquear o computador em caso de ausência. O monitoramento de ambientes virtuais corporativos é expressamente aceito pelos colaboradores.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 13: Respeito no Ambiente de Trabalho -->
+            <div class="conduct-card" id="respeito">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-heart"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_13">10. Respeito no Ambiente de Trabalho</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_13_p1">
+                  Repudiamos qualquer forma de discriminação baseada em origem, nacionalidade, religião, raça, sexo, idade ou orientação afetiva. Garantimos um ambiente livre de assédio moral, sexual ou pressões de qualquer natureza.
+                </p>
+                <p data-i18n="conduct_text_13_p2">
+                  Praticamos diálogos e não imposições; ouvimos e respeitamos as opiniões alheias. Não são permitidos relacionamentos íntimos nas dependências da empresa durante o horário laboral. Preservamos a imagem pessoal com cuidados com a linguagem nas redes sociais e grupos corporativos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 14: Transparência -->
+            <div class="conduct-card" id="transparencia">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-eye"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_14">11. Transparência</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_14">
+                  Agimos com clareza e honestidade. A transparência é um valor inegociável. Reconhecemos que erros acontecem; nesses casos, somos transparentes e trazemos o problema imediatamente à liderança para mitigação de danos e aprendizado.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 15: Cumprimento e Penalidades -->
+            <div class="conduct-card" id="penalidades">
+              <div class="conduct-card-header">
+                <div class="conduct-card-icon"><i class="ph ph-warning-octagon"></i></div>
+                <h4 class="conduct-card-title" data-i18n="conduct_title_15">12. Cumprimento e Penalidades</h4>
+              </div>
+              <div class="conduct-card-body">
+                <p data-i18n="conduct_text_15_p1">
+                  O cumprimento deste Código é obrigatório para todos. Violações podem resultar em sanções disciplinares, incluindo advertência por escrito, suspensão ou desligamento motivado, além de medidas legais cabíveis.
+                </p>
+                <p data-i18n="conduct_text_15_p2">
+                  A empresa oferece canais confidenciais para reportar desvios ou condutas em desacordo com nossas normas, com a segurança de não-retaliação e sigilo das informações prestadas.
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contato">
+      <div class="container footer-container">
+        <div class="footer-col brand-col">
+          <div class="footer-logo-container">
+            <img src="../assets/images/logo/logo.png" alt="Logo AXIA GROUP" />
+          </div>
+          <p class="footer-desc" data-i18n="footer_desc">
+            Educação corporativa, liderança e gestão para empresas em
+            crescimento.
+          </p>
+          <div class="social-links footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4 data-i18n="footer_links_title">Links rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#cursos" class="nav-link" data-i18n="nav_courses">Cursos</a></li>
+            <li><a href="../index.html#sobre" class="nav-link" data-i18n="nav_about">Quem Somos</a></li>
+            <li><a href="Equipe.html" class="nav-link" data-i18n="nav_team">Equipe</a></li>
+            <li><a href="codigo-de-condulta.html" class="nav-link active" data-i18n="nav_conduct">Código de Conduta</a></li>
+            <li><a href="contato.html" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_categories_title">Categorias</h4>
+          <ul class="footer-links location-links">
+            <li><i class="ph ph-map-pin"></i> Portugal</li>
+            <li><i class="ph ph-map-pin"></i> Espanha</li>
+            <li><i class="ph ph-map-pin"></i> Brasil</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_contact_title">Entre em contato</h4>
+          <ul class="footer-links contact-links">
+            <li><i class="ph ph-phone"></i> +55 (27) 98119-3839</li>
+            <li><i class="ph ph-phone"></i> +351 920 607 821</li>
+            <li>
+              <i class="ph ph-envelope-simple"></i> contato@axiagroup.com.br
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/language.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script>
+      // Scroll to specific conduct card function
+      function scrollToCard(id, element) {
+        const card = document.getElementById(id);
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth' });
+          
+          // Update active sidebar nav item
+          document.querySelectorAll('.conduct-nav-item').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          if (element) {
+            element.classList.add('active');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
