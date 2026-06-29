@@ -138,8 +138,22 @@
           <!-- CONTENT CARDS -->
           <div class="conduct-content">
             
-
-
+            <!-- PDF Download Bar -->
+            <div class="conduct-download-bar">
+              <div class="conduct-download-info">
+                <div class="conduct-download-icon">
+                  <i class="ph ph-file-pdf"></i>
+                </div>
+                <div class="conduct-download-text">
+                  <h4 data-i18n="conduct_download_title">Código de Conduta Completo</h4>
+                  <p data-i18n="conduct_download_desc">Baixe a versão oficial em formato PDF para leitura offline.</p>
+                </div>
+              </div>
+              <a href="#" onclick="openPdfModal(event)" class="btn-download">
+                <i class="ph ph-download-simple"></i>
+                <span data-i18n="conduct_download_btn">Baixar PDF</span>
+              </a>
+            </div>
 
             <!-- Intro text -->
             <div class="conduct-card" style="padding: 2rem;">
@@ -450,6 +464,42 @@
       </div>
     </footer>
 
+    <!-- PDF Language Selection Modal -->
+    <div id="pdf-lang-modal" class="pdf-modal-overlay" aria-hidden="true">
+      <div class="pdf-modal-container">
+        <button class="pdf-modal-close" onclick="closePdfModal()" aria-label="Fechar Modal">
+          <i class="ph ph-x"></i>
+        </button>
+        <div class="pdf-modal-header">
+          <div class="pdf-modal-icon">
+            <i class="ph ph-file-pdf"></i>
+          </div>
+          <h3>Download PDF</h3>
+          <p>Selecione o idioma / Seleccione el idioma / Choose the language:</p>
+        </div>
+        <div class="pdf-modal-options">
+          <a href="../pdf/codigo_de_conduta_pt.pdf" download class="pdf-modal-opt-card" onclick="closePdfModal()">
+            <img src="https://flagcdn.com/br.svg" alt="Brasil" />
+            <span class="opt-name">Português</span>
+            <span class="opt-sub">PDF Oficial (PT)</span>
+            <i class="ph ph-download-simple opt-arrow"></i>
+          </a>
+          <a href="../pdf/codigo_de_conduta_es.pdf" download class="pdf-modal-opt-card" onclick="closePdfModal()">
+            <img src="https://flagcdn.com/es.svg" alt="España" />
+            <span class="opt-name">Español</span>
+            <span class="opt-sub">PDF Oficial (ES)</span>
+            <i class="ph ph-download-simple opt-arrow"></i>
+          </a>
+          <a href="../pdf/codigo_de_conduta_en.pdf" download class="pdf-modal-opt-card" onclick="closePdfModal()">
+            <img src="https://flagcdn.com/gb.svg" alt="English" />
+            <span class="opt-name">English</span>
+            <span class="opt-sub">Official PDF (EN)</span>
+            <i class="ph ph-download-simple opt-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="../js/language.js"></script>
     <script src="../js/scripts.js"></script>
@@ -469,6 +519,39 @@
           }
         }
       }
+
+      // PDF Modal Functions
+      function openPdfModal(e) {
+        if (e) e.preventDefault();
+        const modal = document.getElementById('pdf-lang-modal');
+        if (modal) {
+          modal.classList.add('active');
+          modal.setAttribute('aria-hidden', 'false');
+        }
+      }
+
+      // Close PDF modal function
+      function closePdfModal() {
+        const modal = document.getElementById('pdf-lang-modal');
+        if (modal) {
+          modal.classList.remove('active');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      // Close modal on escape key or clicking overlay
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closePdfModal();
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        const modal = document.getElementById('pdf-lang-modal');
+        if (modal && e.target === modal) {
+          closePdfModal();
+        }
+      });
     </script>
   </body>
 </html>

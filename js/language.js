@@ -197,7 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_label_phone: "Telefone / WhatsApp",
             contact_label_msg: "Mensagem ou Dúvida",
             contact_btn_send: "Enviar Mensagem",
-            contact_info_office: "Nossos Escritórios"
+            contact_info_office: "Nossos Escritórios",
+            contact_form_intro: "Preencha o formulário e entraremos em contato em breve."
         },
         es: {
             nav_home: "Inicio",
@@ -395,7 +396,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_label_phone: "Teléfono / WhatsApp",
             contact_label_msg: "Mensaje o Pregunta",
             contact_btn_send: "Enviar Mensaje",
-            contact_info_office: "Nuestras Oficinas"
+            contact_info_office: "Nuestras Oficinas",
+            contact_form_intro: "Complete el formulario y nos pondremos en contacto en breve."
         },
         en: {
             nav_home: "Home",
@@ -593,7 +595,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_label_phone: "Phone / WhatsApp",
             contact_label_msg: "Message or Question",
             contact_btn_send: "Send Message",
-            contact_info_office: "Our Offices"
+            contact_info_office: "Our Offices",
+            contact_form_intro: "Fill out the form and we will get in touch shortly."
         }
     };
 
