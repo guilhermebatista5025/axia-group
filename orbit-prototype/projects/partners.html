@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIA PARTNERS - Assessoria Financeira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      background: #0f121d;
+      color: #f8fafc;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand i {
+      font-size: 2.2rem;
+      color: #f59e0b;
+    }
+    .brand h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .badge {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .card-title {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .card-value {
+      font-size: 1.75rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .card-trend {
+      font-size: 0.75rem;
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(245, 158, 11, 0.2);
+    }
+    .timeline-item {
+      position: relative;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -23px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+    .timeline-date {
+      font-size: 0.75rem;
+      color: #f59e0b;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-desc {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <i class="ph ph-handshake"></i>
+      <div>
+        <h1>AXIA PARTNERS</h1>
+        <div style="font-size: 0.7rem; color: #64748b;">M&A & FINANCIAL ADVISORY</div>
+      </div>
+    </div>
+    <span class="badge">Atendimento VIP</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">M&A Executados</div>
+      <div class="card-value">R$ 480M</div>
+      <div class="card-trend">
+        <i class="ph ph-check-square"></i> Transações com Sucesso
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Projetos em Captação</div>
+      <div class="card-value">6 Ativos</div>
+      <div class="card-trend" style="color: #f59e0b;">
+        <i class="ph ph-hourglass"></i> Fases de Due Diligence
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Valuation Médio</div>
+      <div class="card-value">R$ 45M</div>
+      <div class="card-trend" style="color: #64748b;">
+        <i class="ph ph-calculator"></i> Métodos Múltiplos e FCD
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 1.5rem;">
+    <div class="card-title" style="margin-bottom: 1.25rem;">Etapas Recentes de Transações</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Junho, 2026</div>
+          <div class="timeline-title">Assinatura de MOU - Projeto Lótus</div>
+          <p class="timeline-desc">Acordo preliminar de fusão assinado entre as partes de saúde integrativa.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Maio, 2026</div>
+          <div class="timeline-title">Conclusão de Auditoria (Due Diligence)</div>
+          <p class="timeline-desc">Fase de análise contábil e de compliance tributária validada com sucesso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

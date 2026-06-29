@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIA GROUP - Orbiting Projects Prototype</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Mock Navigation Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <i class="ph ph-shield-checkered"></i>
+        <span>AXIA GROUP</span>
+      </div>
+      <nav class="nav">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#projetos" class="nav-link active">Projetos</a>
+        <a href="#sobre" class="nav-link">Quem Somos</a>
+      </nav>
+      <button class="btn btn-primary">Fale Conosco</button>
+    </div>
+  </header>
+
+  <!-- Hero / Introduction Intro -->
+  <section class="hero" id="inicio">
+    <div class="container hero-container">
+      <span class="hero-tag">Protótipo Interativo v1.0</span>
+      <h1>Nossas Divisões de Negócio & <span class="text-gradient">Projetos Ativos</span></h1>
+      <p>Explore as principais áreas de atuação e empresas integradas do grupo através do nosso mapa de órbita interativo 3D. Clique em qualquer divisão para ver seus sistemas integrados em tempo real.</p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-outline">Ver Órbita 3D</a>
+        <a href="https://axiagroup.com.br" target="_blank" class="btn btn-link">Visitar Site Oficial <i class="ph ph-arrow-square-out"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orbit Projects Section -->
+  <section class="projects-section" id="projetos">
+    <div class="container projects-container">
+      <div class="section-header">
+        <h2>Órbita de Projetos AXIA</h2>
+        <p>Posicione o mouse sobre a órbita para pausar o giro. Clique em um dos projetos para navegar no sistema ao vivo diretamente na nossa plataforma.</p>
+      </div>
+
+      <!-- The Tilted 3D Orbit Component -->
+      <div class="orbit-viewport">
+        <!-- Saturn Tilted System Outer Wrapper -->
+        <div class="saturn-system">
+          
+          <!-- Tilted Background Glow Ring -->
+          <div class="orbit-glow-ring"></div>
+          
+          <!-- Orbit Track Ring -->
+          <div class="orbit-track">
+            
+            <!-- Project Card 1: AXIA AGRO -->
+            <div class="orbit-card-wrapper card-pos-0">
+              <div class="project-card shadow-premium" onclick="openProjectPreview('projects/agro.html', 'https://agro.axiagroup.com.br')">
+                <div class="card-icon icon-agro"><i class="ph ph-plant"></i></div>
+                <div class="card-info">
+                  <h3>AXIA Agro</h3>
+                  <p>Mapeamento de safra e consultoria agrícola especializada.</p>
+                </div>
+                <div class="card-action">
+                  <span>Conectar</span>
+                  <i class="ph ph-caret-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2: AXIA ACADEMY -->
+            <div class="orbit-card-wrapper card-pos-1">
+              <div class="project-card shadow-premium" onclick="openProjectPreview('projects/academy.html', 'https://academy.axiagroup.com.br')">
+                <div class="card-icon icon-academy"><i class="ph ph-graduation-cap"></i></div>
+                <div class="card-info">
+                  <h3>AXIA Academy</h3>
+                  <p>Educação executiva e plataforma digital corporativa.</p>
+                </div>
+                <div class="card-action">
+                  <span>Acessar</span>
+                  <i class="ph ph-caret-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3: AXIA PARTNERS -->
+            <div class="orbit-card-wrapper card-pos-2">
+              <div class="project-card shadow-premium" onclick="openProjectPreview('projects/partners.html', 'https://partners.axiagroup.com.br')">
+                <div class="card-icon icon-partners"><i class="ph ph-handshake"></i></div>
+                <div class="card-info">
+                  <h3>AXIA Partners</h3>
+                  <p>Assessoria em fusões, aquisições e estruturação financeira.</p>
+                </div>
+                <div class="card-action">
+                  <span>Consultar</span>
+                  <i class="ph ph-caret-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 4: AXIA TECH -->
+            <div class="orbit-card-wrapper card-pos-3">
+              <div class="project-card shadow-premium" onclick="openProjectPreview('projects/tech.html', 'https://tech.axiagroup.com.br')">
+                <div class="card-icon icon-tech"><i class="ph ph-cpu"></i></div>
+                <div class="card-info">
+                  <h3>AXIA Tech</h3>
+                  <p>Incubação tecnológica, APIs e soluções digitais sob medida.</p>
+                </div>
+                <div class="card-action">
+                  <span>Integrar</span>
+                  <i class="ph ph-caret-right"></i>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- /orbit-track -->
+        </div> <!-- /saturn-system -->
+      </div> <!-- /orbit-viewport -->
+
+    </div> <!-- /projects-container -->
+  </section>
+
+  <!-- Live Project Modal Preview (IFrame) -->
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-overlay" onclick="closeProjectPreview()"></div>
+    <div class="modal-container">
+      
+      <!-- Mock Browser Title Bar (Premium visual Polish) -->
+      <div class="browser-bar">
+        <div class="browser-actions">
+          <span class="dot-btn red" onclick="closeProjectPreview()"></span>
+          <span class="dot-btn yellow"></span>
+          <span class="dot-btn green"></span>
+        </div>
+        <div class="browser-address">
+          <i class="ph ph-lock-keyhole"></i>
+          <span id="browser-url-text">https://agro.axiagroup.com.br</span>
+        </div>
+        <button class="browser-close-btn" onclick="closeProjectPreview()">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+
+      <!-- IFrame and Loading Area -->
+      <div class="iframe-wrapper">
+        <div class="iframe-loader" id="iframe-loader">
+          <i class="ph ph-circle-notch spinner-icon"></i>
+          <span>Conectando ao servidor seguro...</span>
+        </div>
+        <iframe id="project-iframe" src="" frameborder="0" onload="hideIframeLoader()"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -2137,9 +2137,9 @@ h6 {
   /* Menu e Cabeçalho Móvel */
   .header {
     height: 80px;
-    background-color: transparent;
-    border-bottom: none;
-    box-shadow: none;
+    background-color: #0e2241;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
   .header.scrolled {
     height: 80px;
@@ -2162,15 +2162,39 @@ h6 {
     position: relative;
   }
   .header-logo-container {
-    position: static;
-    transform: none;
-    height: 40px;
-    margin-top: 0;
-    margin-left: 0;
+    position: relative;
+    height: 100%;
+    width: 200px;
+    margin-top: -45px;
+    margin-left: -40px;
+    display: flex;
+    align-items: center;
   }
   .header-logo-container img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 120px;
+    width: auto;
+    object-fit: contain;
     margin-left: 0;
-    height: 100%;
+    z-index: 10;
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header.scrolled .header-logo-container img {
+    height: 120px;
+    margin-left: 0;
+  }
+  .footer-logo-container {
+    height: 150px;
+    margin-top: 0;
+    margin-left: -15px;
+    margin-bottom: 1.5rem;
+  }
+  .footer-desc {
+    margin-top: -50px;
+    max-width: 100%;
   }
   .header-actions .btn {
     display: none;
@@ -2195,7 +2219,7 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 5rem;
     transform: none;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
@@ -2215,7 +2239,7 @@ h6 {
 
   /* Hero Section - Mobile Spec */
   .hero {
-    padding: 135px 0 20px;
+    margin-top: -33px;
     min-height: auto;
     background: #060f1e url('../assets/elementos-hero/hero-mobile.png') no-repeat center 110px;
     background-size: 125% auto;
@@ -2254,7 +2278,7 @@ h6 {
     margin-bottom: 0.75rem;
     letter-spacing: -0.5px;
     text-align: left;
-    margin-top: 0.5rem;
+    margin-top: 60px;
   }
   .hero-mobile-title .text-accent {
     color: #00FFD1;
@@ -2309,9 +2333,9 @@ h6 {
   .hero-mobile-benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.25rem;
+    gap: 10px;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 5px;
     padding-top: 1.5rem;
     border-top: none;
   }
@@ -2321,21 +2345,23 @@ h6 {
     align-items: center;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.15);
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
+    padding-right: 5px;
+    padding-left: 5px;
   }
   .mobile-benefit-item:last-child {
     border-right: none;
   }
   .mobile-benefit-item i {
     color: #00FFD1;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+    margin-left: -10px;
   }
   .mobile-benefit-item span {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
+    margin-left: -10px;
     line-height: 1.35;
   }
 
@@ -2347,7 +2373,7 @@ h6 {
     width: 100%;
     padding-top: 1.25rem;
     margin-top: 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
   }
   .hero-mobile-footer-row span {
     font-size: 0.55rem;

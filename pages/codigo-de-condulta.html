@@ -139,7 +139,10 @@
           <div class="conduct-content">
             
             <!-- PDF Download Bar -->
-            <div class="conduct-download-bar">
+            <div class="conduct-download-bar" id="conduct-download-bar">
+              <button class="btn-close-download-bar" onclick="dismissDownloadBar(event)" aria-label="Fechar alerta de download">
+                <i class="ph ph-x"></i>
+              </button>
               <div class="conduct-download-info">
                 <div class="conduct-download-icon">
                   <i class="ph ph-file-pdf"></i>
@@ -550,6 +553,34 @@
         const modal = document.getElementById('pdf-lang-modal');
         if (modal && e.target === modal) {
           closePdfModal();
+        }
+      });
+
+      // PDF Download Bar Dismiss/Reset logic
+      let isDownloadBarDismissed = false;
+
+      function dismissDownloadBar(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        const bar = document.getElementById('conduct-download-bar');
+        if (bar) {
+          bar.classList.add('dismissed');
+          isDownloadBarDismissed = true;
+        }
+      }
+
+      window.addEventListener('scroll', () => {
+        // If we scroll back to top, restore the dismissed download bar
+        if (window.scrollY < 50) {
+          if (isDownloadBarDismissed) {
+            const bar = document.getElementById('conduct-download-bar');
+            if (bar) {
+              bar.classList.remove('dismissed');
+              isDownloadBarDismissed = false;
+            }
+          }
         }
       });
     </script>

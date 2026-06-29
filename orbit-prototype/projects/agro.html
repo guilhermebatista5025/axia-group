@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIA AGRO - Monitor de Operações</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      background: #07111e;
+      color: #f8fafc;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 255, 209, 0.15);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand i {
+      font-size: 2.2rem;
+      color: #00ffd1;
+    }
+    .brand h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .badge {
+      background: rgba(0, 255, 209, 0.1);
+      border: 1px solid #00ffd1;
+      color: #00ffd1;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .card-title {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .card-value {
+      font-size: 1.75rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .card-trend {
+      font-size: 0.75rem;
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .chart-container {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .chart-header {
+      margin-bottom: 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #00ffd1;
+    }
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      height: 140px;
+      padding-top: 1rem;
+    }
+    .bar-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+    }
+    .bar-fill {
+      width: 100%;
+      background: linear-gradient(180deg, #00ffd1, #008f7a);
+      border-radius: 4px 4px 0 0;
+      transition: height 1s ease;
+      position: relative;
+    }
+    .bar-fill::after {
+      content: attr(data-val);
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: #94a3b8;
+    }
+    .bar-label {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+    .contracts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contract-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+    }
+    .contract-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .contract-status {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <i class="ph ph-plant"></i>
+      <div>
+        <h1>AXIA AGRO</h1>
+        <div style="font-size: 0.7rem; color: #64748b;">AGROBUSINESS ANALYTICS</div>
+      </div>
+    </div>
+    <span class="badge">Operação Ativa</span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Área Mapeada (HA)</div>
+      <div class="card-value">12.450</div>
+      <div class="card-trend">
+        <i class="ph ph-trend-up"></i> +12% este mês
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Produção Estimada</div>
+      <div class="card-value">84.200 ton</div>
+      <div class="card-trend">
+        <i class="ph ph-trend-up"></i> +5.4% acima da meta
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Sensores IoT</div>
+      <div class="card-value">342 / 342</div>
+      <div class="card-trend" style="color: #64748b;">
+        <i class="ph ph-check-circle"></i> Todos online
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-header">Precipitação Acumulada vs Eficiência Hídrica</div>
+    <div class="bar-chart">
+      <div class="bar-col">
+        <div class="bar-fill" style="height: 40%;" data-val="40%"></div>
+        <div class="bar-label">Out</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-fill" style="height: 60%;" data-val="60%"></div>
+        <div class="bar-label">Nov</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-fill" style="height: 85%;" data-val="85%"></div>
+        <div class="bar-label">Dez</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-fill" style="height: 55%;" data-val="55%"></div>
+        <div class="bar-label">Jan</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 1.5rem;">
+    <div class="card-title" style="margin-bottom: 1rem;">Contratos de Consultoria Agro</div>
+    <div class="contracts-list">
+      <div class="contract-item">
+        <span class="contract-name">Fazenda Rio Grande - Auditoria de Sustentabilidade</span>
+        <span class="contract-status">Concluído</span>
+      </div>
+      <div class="contract-item">
+        <span class="contract-name">Grupo Mutum - Otimização de Safra</span>
+        <span class="contract-status" style="background:rgba(59,130,246,0.15); color:#3b82f6;">Em Progresso</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
