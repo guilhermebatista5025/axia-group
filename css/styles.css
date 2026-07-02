@@ -181,7 +181,7 @@ h6 {
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: 1400px !important;
+  max-width: 1600px !important;
   margin: 0 auto;
   padding: 0 2rem;
   transform: translateY(-20px);
@@ -190,10 +190,10 @@ h6 {
 .header-logo-container {
   position: absolute;
   left: 1rem;
-  top: 83%;
+  top: 80%;
   transform: translateY(-50%);
   height: 100%;
-  width: 220px;
+  width: 250px;
   margin-left: -100px;
   display: flex;
   align-items: center;
@@ -207,8 +207,8 @@ h6 {
 }
 
 .header-logo-container img {
-  margin-left: 90px;
-  height: 150px;
+  margin-left: 70px;
+  height: 170px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -235,9 +235,10 @@ h6 {
 
 .nav-link {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 500;
   position: relative;
+  margin-top: 10px;
   padding-bottom: 6px;
 }
 
@@ -2550,4 +2551,28 @@ h6 {
     gap: 0.8rem;
   }
 }
+
+/* Prevent header navigation wrapping and adjust spacing for Portuguese and Spanish */
+html[lang^="pt"] .nav-link,
+html[lang^="es"] .nav-link {
+  white-space: nowrap;
+}
+
+html[lang^="pt"] .nav-menu,
+html[lang^="es"] .nav-menu {
+  width: max-content;
+}
+
+@media (min-width: 993px) {
+  .nav-menu {
+    left: 48%; /* Centered beautifully in the expanded header */
+  }
+  .nav-link {
+    padding: 0 1.2rem 6px 1.2rem; /* Generous internal padding (espaçamento interno) for links */
+  }
+  .nav-list {
+    gap: 0.8rem; /* Optimized gap combined with link padding */
+  }
+}
+
 
